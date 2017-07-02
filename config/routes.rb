@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   namespace :panel do
+    resources :services
+  end
+  namespace :panel do
+    resources :abouts
+  end
+  namespace :panel do
     resources :customs
   end
   namespace :dashboard do

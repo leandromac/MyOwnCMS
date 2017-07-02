@@ -1,8 +1,8 @@
 <h4 class="flow-text">About</h4>
-
+<% @panel_abouts.each do |panel_about| %>
 <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="http://lorempixel.com/1920/600/city/">
+      <img class="activator" src="<%= panel_about.image %>">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
@@ -10,7 +10,8 @@
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <p><%= panel_about.about %></p>
+
     </div>
   </div>
 
@@ -22,9 +23,8 @@
     </div>
     <div class="col s10">
       <span class="black-text">
-        <h4 class="flow-text" style="margin: 0px">Gatonildo Miow</h4>
-        Your can type a little text about your business here, or a client depoiment, if you want. This is a square image.<br>
-        Add the "circle" class to it to make it appear circular. You are free to do what you want without need developer for this.
+        <h4 class="flow-text" style="margin: 0px"><%= panel_about.title %></h4>
+        <%= panel_about.about %>
       </span>
     </div>
   </div>
@@ -32,7 +32,7 @@
 </div>
 <blockquote>
   <p>
-    Your can type a little text about your business here, or a client depoiment, if you want. This is a square image.
-    Add the "circle" class to it to make it appear circular. You are free to do what you want without need developer for this.
+    <%= panel_about.blockquote %>
   </p>
 </blockquote>
+<% end %>

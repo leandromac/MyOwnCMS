@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @panel_service.image %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @panel_service.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @panel_service.description %>
+</p>
+
+<%= link_to 'Edit', edit_panel_service_path(@panel_service) %> |
+<%= link_to 'Back', panel_services_path %>

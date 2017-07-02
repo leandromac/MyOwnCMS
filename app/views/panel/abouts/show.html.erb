@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @panel_about.image %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @panel_about.title %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @panel_about.about %>
+</p>
+
+<p>
+  <strong>Blockquote:</strong>
+  <%= @panel_about.blockquote %>
+</p>
+
+<%= link_to 'Edit', edit_panel_about_path(@panel_about) %> |
+<%= link_to 'Back', panel_abouts_path %>

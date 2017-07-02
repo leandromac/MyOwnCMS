@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Panel Abouts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>About</th>
+      <th>Blockquote</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @panel_abouts.each do |panel_about| %>
+      <tr>
+        <td><%= panel_about.image %></td>
+        <td><%= panel_about.title %></td>
+        <td><%= panel_about.about %></td>
+        <td><%= panel_about.blockquote %></td>
+        <td><%= link_to 'Show', panel_about %></td>
+        <td><%= link_to 'Edit', edit_panel_about_path(panel_about) %></td>
+        <td><%= link_to 'Destroy', panel_about, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New About', new_panel_about_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@panel_about) do |f| %>
+  <% if @panel_about.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@panel_about.errors.count, "error") %> prohibited this panel_about from being saved:</h2>
+
+      <ul>
+      <% @panel_about.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :about %><br>
+    <%= f.text_area :about %>
+  </div>
+  <div class="field">
+    <%= f.label :blockquote %><br>
+    <%= f.text_area :blockquote %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
