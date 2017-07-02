@@ -1,3 +1,4 @@
+<% @panel_customs.each do |panel_custom| %>
 <div class="carousel carousel-slider center" data-indicators="true">
     <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1">
     </a>
@@ -15,8 +16,7 @@
         <div class="col s10">
           <span class="black-text">
             <h4 class="flow-text" style="margin: 0px">Gatonildo Miow</h4>
-            Your can type a little text about your business here, or a client depoiment, if you want. This is a square image.<br>
-            Add the "circle" class to it to make it appear circular. You are free to do what you want without need developer for this.
+            <%= panel_custom.about %>
           </span>
         </div>
       </div>
@@ -104,3 +104,4 @@
         </div>
       </div>
   </div>
+<% end %>

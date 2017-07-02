@@ -1,7 +1,8 @@
+<% @panel_customs.each do |panel_custom| %>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyOwnCMS</title>
+  <title><%= panel_custom.name %></title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -16,12 +17,13 @@
 </head>
 <body>
 
+
 <!-- START NAVBAR -->
   <div class="navbar-fixed">
     <nav>
     <div class="container">
       <div class="nav-wrapper">
-        <%= link_to "YourLogo", page_home_path, class: 'brand-logo' %>
+        <%= link_to panel_custom.name, page_home_path, class: 'brand-logo' %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="<% if active == 'home' %>active<% end %>">
@@ -72,22 +74,25 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">About Us</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <p class="grey-text text-lighten-4">
+            <%= panel_custom.about %>
+          </p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Contact us</h5>
           <ul>
             <li>Phone:
-              <a class="white-text text-lighten-3" href="#!">
-                (+000) 000 000 000
+              <a class="white-text text-lighten-3" disable="disable">
+                <%= panel_custom.phone %>
               </a>
             </li>
             <li>Email:
-              <a class="grey-text text-lighten-3" href="#!">
-                contact@youremail.com
+              <a class="grey-text text-lighten-3" href="mailto:<%= panel_custom.email %>">
+                <%= panel_custom.email %>
               </a>
             </li>
-            <li>Larkin Fork, 282 Kevin Brook, California
+            <li>
+              <%= panel_custom.address %>
             </li>
           </ul>
         </div>
@@ -95,11 +100,12 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © <%= Date.today.year %> Copyright Text
-      <a class="social grey-text text-lighten-4 right" href="#!">Youtube</a>
-      <a class="social grey-text text-lighten-4 right" href="#!">Instagram</a>
-      <a class="social grey-text text-lighten-4 right" href="#!">Twitter</a>
-      <a class="social grey-text text-lighten-4 right" href="#!">Facebook</a>
+      © <%= Date.today.year %> Copyright - <%= panel_custom.name %>
+      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.linkedin %>" target="_blank">LinkedIn</a>
+      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.youtube %>" target="_blank">Youtube</a>
+      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.instagram %>" target="_blank">Instagram</a>
+      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.twitter %>" target="_blank">Twitter</a>
+      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.youtube %>" target="_blank">Facebook</a>
       </div>
     </div>
   </footer>
@@ -118,3 +124,4 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
+<% end %>

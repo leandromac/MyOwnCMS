@@ -1,0 +1,61 @@
+<%= form_for(@panel_custom) do |f| %>
+  <% if @panel_custom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@panel_custom.errors.count, "error") %> prohibited this panel_custom from being saved:</h2>
+
+      <ul>
+      <% @panel_custom.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :logo %><br>
+    <%= f.text_field :logo %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :about %><br>
+    <%= f.text_area :about %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook %><br>
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :instagram %><br>
+    <%= f.text_field :instagram %>
+  </div>
+  <div class="field">
+    <%= f.label :youtube %><br>
+    <%= f.text_field :youtube %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin %><br>
+    <%= f.text_field :linkedin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Panel Customs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Logo</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>About</th>
+      <th>Facebook</th>
+      <th>Twitter</th>
+      <th>Instagram</th>
+      <th>Youtube</th>
+      <th>Linkedin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @panel_customs.each do |panel_custom| %>
+      <tr>
+        <td><%= panel_custom.name %></td>
+        <td><%= panel_custom.logo %></td>
+        <td><%= panel_custom.phone %></td>
+        <td><%= panel_custom.email %></td>
+        <td><%= panel_custom.address %></td>
+        <td><%= panel_custom.about %></td>
+        <td><%= panel_custom.facebook %></td>
+        <td><%= panel_custom.twitter %></td>
+        <td><%= panel_custom.instagram %></td>
+        <td><%= panel_custom.youtube %></td>
+        <td><%= panel_custom.linkedin %></td>
+        <td><%= link_to 'Show', panel_custom %></td>
+        <td><%= link_to 'Edit', edit_panel_custom_path(panel_custom) %></td>
+        <td><%= link_to 'Destroy', panel_custom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Custom', new_panel_custom_path %>
