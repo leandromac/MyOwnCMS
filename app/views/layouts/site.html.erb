@@ -24,16 +24,16 @@
         <%= link_to "YourLogo", page_home_path, class: 'brand-logo' %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
+          <li class="<% if active == 'home' %>active<% end %>">
             <%= link_to "Home", page_home_path %>
           </li>
-          <li>
+          <li class="<% if active == 'about' %>active<% end %>">
             <%= link_to "About", page_about_path %>
           </li>
-          <li>
+          <li class="<% if active == 'service' %>active<% end %>">
             <%= link_to "Services", page_service_path %>
           </li>
-          <li>
+          <li class="<% if active == 'contact' %>active<% end %>">
             <%= link_to "Contact", page_contact_path %>
           </li>
         </ul>
@@ -108,6 +108,10 @@
   <script>
     $(".button-collapse").sideNav();
     $('.carousel.carousel-slider').carousel({fullWidth: true});
+    $(document).ready(function() {
+      Materialize.updateTextFields();
+    });
+
   </script>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
