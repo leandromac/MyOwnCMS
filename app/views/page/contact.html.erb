@@ -1,17 +1,18 @@
+<% @panel_customs.each do |panel_custom| %>
 <h4 class="flow-text">Contact Us</h4>
 
 <div class="row">
 
   <div class="col s12 m6">
 
-    <blockquote>I am a very simple card. I am good at containing small bits of information.
-    I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+    <blockquote>
+      <%= panel_custom.text_contact %>
     </blockquote>
 
     <ul class="collection">
-      <li class="collection-item"><b>Phone:</b> (+000) 000 000 000</li>
-      <li class="collection-item"><b>Email:</b> contact@youremail.com</li>
-      <li class="collection-item"><b>Address:</b> Larkin Fork, 282 Kevin Brook, California</li>
+      <li class="collection-item"><b>Phone:</b> <%= panel_custom.phone %></li>
+      <li class="collection-item"><b>Email:</b> <%= panel_custom.email %></li>
+      <li class="collection-item"><b>Address:</b> <%= panel_custom.address %></li>
     </ul>
   </div>
 
@@ -48,3 +49,4 @@
   </div>
 
 </div>
+<% end %>

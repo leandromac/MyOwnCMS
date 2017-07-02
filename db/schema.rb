@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170702182539) do
+ActiveRecord::Schema.define(version: 20170702184949) do
 
   create_table "dashboard_homes", force: :cascade do |t|
     t.string   "logo"
@@ -40,8 +40,9 @@ ActiveRecord::Schema.define(version: 20170702182539) do
     t.string   "instagram"
     t.string   "youtube"
     t.string   "linkedin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "text_contact"
   end
 
   create_table "panel_services", force: :cascade do |t|
