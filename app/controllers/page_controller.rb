@@ -1,10 +1,10 @@
 class PageController < ApplicationController
-  before_action :panel_customs, only: [:home, :about, :service, :contact]
+  before_action :site_home, only: [:home, :about, :service, :contact]
 
   layout 'site'
 
   def home
-    @panel_customs = Panel::Custom.all
+
   end
 
   def about
@@ -18,9 +18,9 @@ class PageController < ApplicationController
   def contact
   end
 
-  def panel_customs
+  def site_home
     @panel_customs = Panel::Custom.all
+    @panel_services = Panel::Service.all
   end
-
 
 end
