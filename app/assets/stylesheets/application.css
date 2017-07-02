@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.social {
+  margin: 0px 5px 0px 5px;
+}

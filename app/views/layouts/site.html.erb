@@ -21,7 +21,7 @@
     <nav>
     <div class="container">
       <div class="nav-wrapper">
-      <a href="#" class="brand-logo">YourLogo</a>
+        <%= link_to "YourLogo", page_home_path, class: 'brand-logo' %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
@@ -95,8 +95,11 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2014 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      © <%= Date.today.year %> Copyright Text
+      <a class="social grey-text text-lighten-4 right" href="#!">Youtube</a>
+      <a class="social grey-text text-lighten-4 right" href="#!">Instagram</a>
+      <a class="social grey-text text-lighten-4 right" href="#!">Twitter</a>
+      <a class="social grey-text text-lighten-4 right" href="#!">Facebook</a>
       </div>
     </div>
   </footer>
