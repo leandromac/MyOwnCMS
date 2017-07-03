@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'panel/home'
+
+  devise_for :users
   namespace :panel do
     resources :services
   end
@@ -11,7 +14,7 @@ Rails.application.routes.draw do
   namespace :dashboard do
     resources :homes
   end
-  root 'page#home'
+  root :to => 'page#home'
   get 'page/home'
 
   get 'page/about'

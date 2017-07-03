@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyOwnCMS</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- START NAVBAR -->
+  <div class="navbar-fixed">
+    <nav style="background-color: #26a69a">
+    <div class="container">
+      <div class="nav-wrapper">
+        MyOwnCMS
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="<% if active == 'panel' %>active<% end %>">
+            <%= link_to "Home", panel_home_path %>
+          </li>
+          <li class="<% if active == 'users/profile' %>active<% end %>">
+            <%= link_to "Profile", '#' %>
+          </li>
+          <li class="<% if active == 'panel/customs' %>active<% end %>">
+            <%= link_to "Custom", panel_customs_path %>
+          </li>
+          <li class="<% if active == 'panel/abouts' %>active<% end %>">
+            <%= link_to "About", panel_abouts_path %>
+          </li>
+          <li class="<% if active == 'panel/services' %>active<% end %>">
+            <%= link_to "Services", panel_services_path %>
+          </li>
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+          <li>
+            <%= link_to "Home", page_home_path %>
+          </li>
+          <li>
+            <%= link_to "About", page_about_path %>
+          </li>
+          <li>
+            <%= link_to "Services", page_service_path %>
+          </li>
+          <li>
+            <%= link_to "Contact", page_contact_path %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+  </div>
+<!-- END NAVBAR -->
+
+<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+<ul id="slide-out" class="side-nav">
+  <li><div class="user-view">
+    <div class="background">
+      <img src="images/office.jpg">
+    </div>
+    <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+    <a href="#!name"><span class="white-text name">John Doe</span></a>
+    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+  </div></li>
+  <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+  <li><a href="#!">Second Link</a></li>
+  <li><div class="divider"></div></li>
+  <li><a class="subheader">Subheader</a></li>
+  <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+</ul>
+
+
+
+<!-- START CONTENT -->
+  <div class="container">
+
+    <%= yield %>
+
+  </div>
+<!-- END CONTENT -->
+
+
+
+  <script>
+    $(".button-collapse").sideNav();
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    $(document).ready(function() {
+      Materialize.updateTextFields();
+    });
+
+  </script>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

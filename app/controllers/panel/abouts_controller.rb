@@ -1,6 +1,7 @@
 class Panel::AboutsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_panel_about, only: [:show, :edit, :update, :destroy]
-
+  layout 'panel'
   # GET /panel/abouts
   # GET /panel/abouts.json
   def index

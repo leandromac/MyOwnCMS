@@ -4,7 +4,6 @@ class PageController < ApplicationController
   layout 'site'
 
   def home
-
   end
 
   def about
