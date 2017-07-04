@@ -18,11 +18,7 @@
   <% @panel_styles.each do |panel_style| %>
     <style>
       nav {
-        color: <%= panel_style.nav_text_color %> !important;
         background-color: <%= panel_style.nav_color %> !important;
-      }
-      nav ul a:hover a:active {
-        background-color: <%= panel_style.menu_hover_color %> !important;
       }
       .page-footer {
         background-color: <%= panel_style.footer_color %> !important;
