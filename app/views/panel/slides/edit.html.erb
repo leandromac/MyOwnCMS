@@ -1,6 +1,22 @@
-<h1>Editing Panel Slide</h1>
+<div class="row">
+  <div class="col-lg-12">
 
-<%= render 'form' %>
+    <h1 class="page-header">
+      <small><i class="fa fa-desktop"></i> Slideshow</small>
+    </h1>
 
-<%= link_to 'Show', @panel_slide %> |
-<%= link_to 'Back', panel_slides_path %>
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <%= render partial: 'slide' %>
+
+  <div class="col-lg-4">
+    <%= render partial: 'form' %>
+  </div>
+</div>
+
+<%#= link_to 'Show', @panel_slide %>
+<%#= link_to 'Back', panel_slides_path %>

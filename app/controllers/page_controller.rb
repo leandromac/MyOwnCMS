@@ -21,6 +21,7 @@ class PageController < ApplicationController
     @panel_customs = Panel::Custom.all
     @panel_services = Panel::Service.all
     @panel_styles = Panel::Style.all
+    @panel_slides = Panel::Slide.all
   end
 
 end

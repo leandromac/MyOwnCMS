@@ -20,6 +20,7 @@ class Panel::SlidesController < ApplicationController
 
   # GET /panel/slides/1/edit
   def edit
+    @panel_slides = Panel::Slide.all
   end
 
   # POST /panel/slides
@@ -29,7 +30,7 @@ class Panel::SlidesController < ApplicationController
 
     respond_to do |format|
       if @panel_slide.save
-        format.html { redirect_to @panel_slide, notice: 'Slide was successfully created.' }
+        format.html { redirect_to panel_slides_path, notice: 'Slide was successfully created.' }
         format.json { render :show, status: :created, location: @panel_slide }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class Panel::SlidesController < ApplicationController
   def update
     respond_to do |format|
       if @panel_slide.update(panel_slide_params)
-        format.html { redirect_to @panel_slide, notice: 'Slide was successfully updated.' }
+        format.html { redirect_to panel_slides_path, notice: 'Slide was successfully updated.' }
         format.json { render :show, status: :ok, location: @panel_slide }
       else
         format.html { render :edit }

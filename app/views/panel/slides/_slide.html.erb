@@ -1,0 +1,31 @@
+<div class="col-lg-8">
+    <div class="panel-group" id="accordion">
+        <% @panel_slides.each do |panel_slide| %>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#<%= panel_slide.id %>" aria-expanded="false" class="collapsed">
+                    <%= panel_slide.title %></a>
+                    <span class="pull-right" style="margin-top: -5px">
+                      <%= link_to edit_panel_slide_path(panel_slide), class: 'btn btn-warning btn-circle' do %>
+                        <i class="fa fa-pencil"></i>
+                      <% end %>
+
+                      <%= link_to panel_slide, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-circle' do %>
+                        <i class="fa fa-trash"></i>
+                      <% end %>
+                    </span>
+                </h4>
+            </div>
+            <div id="<%= panel_slide.id %>" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                <div class="panel-body">
+                  <a href="<%= panel_slide.link %>" target="_blank">
+                    <img src="<%= panel_slide.image %>" width="660" alt="<%= panel_slide.title %>">
+                  </a>
+                    <%= panel_slide.description %>
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+  </div>
