@@ -7,6 +7,7 @@ class Panel::ServicesController < ApplicationController
   # GET /panel/services.json
   def index
     @panel_services = Panel::Service.all
+    @panel_service = Panel::Service.new
   end
 
   # GET /panel/services/1
@@ -21,6 +22,7 @@ class Panel::ServicesController < ApplicationController
 
   # GET /panel/services/1/edit
   def edit
+    @panel_services = Panel::Service.all
   end
 
   # POST /panel/services
@@ -30,7 +32,7 @@ class Panel::ServicesController < ApplicationController
 
     respond_to do |format|
       if @panel_service.save
-        format.html { redirect_to @panel_service, notice: 'Service was successfully created.' }
+        format.html { redirect_to panel_services_path, notice: 'Service was successfully created.' }
         format.json { render :show, status: :created, location: @panel_service }
       else
         format.html { render :new }
@@ -44,7 +46,7 @@ class Panel::ServicesController < ApplicationController
   def update
     respond_to do |format|
       if @panel_service.update(panel_service_params)
-        format.html { redirect_to @panel_service, notice: 'Service was successfully updated.' }
+        format.html { redirect_to panel_services_path, notice: 'Service was successfully updated.' }
         format.json { render :show, status: :ok, location: @panel_service }
       else
         format.html { render :edit }

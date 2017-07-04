@@ -1,0 +1,25 @@
+<h4>All services <small class="pull-right">( <%= services_count %> )</small></h4>
+
+<div class="row">
+  <% @panel_services.each do |panel_service| %>
+  <div class="col-lg-2">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <%= panel_service.title %>
+        </div>
+        <div class="panel-body">
+            <img src="<%= panel_service.image %>" width="120" class="img-rounded">
+            <p><%= truncate(panel_service.description, length: 50) %></p>
+        </div>
+        <div class="panel-footer">
+          <%= link_to edit_panel_service_path(panel_service), class: "btn btn-warning btn-circle" do %>
+            <i class="fa fa-pencil"></i>
+          <% end %>
+          <%= link_to panel_service, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-circle pull-right" do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
+        </div>
+    </div>
+  </div>
+  <% end %>
+</div>

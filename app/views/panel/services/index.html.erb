@@ -1,31 +1,5 @@
+<%= render partial: 'form' %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Panel Services</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @panel_services.each do |panel_service| %>
-      <tr>
-        <td><%= panel_service.image %></td>
-        <td><%= panel_service.title %></td>
-        <td><%= panel_service.description %></td>
-        <td><%= link_to 'Show', panel_service %></td>
-        <td><%= link_to 'Edit', edit_panel_service_path(panel_service) %></td>
-        <td><%= link_to 'Destroy', panel_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Service', new_panel_service_path %>
+<%= render partial: 'all_services' %>

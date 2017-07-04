@@ -13,12 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20170703000537) do
 
-  create_table "dashboard_homes", force: :cascade do |t|
-    t.string   "logo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "panel_abouts", force: :cascade do |t|
     t.string   "image"
     t.string   "title"
