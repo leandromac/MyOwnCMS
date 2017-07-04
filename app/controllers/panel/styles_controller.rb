@@ -29,7 +29,7 @@ class Panel::StylesController < ApplicationController
 
     respond_to do |format|
       if @panel_style.save
-        format.html { redirect_to @panel_style, notice: 'Style was successfully created.' }
+        format.html { redirect_to edit_panel_style_path(1), notice: 'Style was successfully created.' }
         format.json { render :show, status: :created, location: @panel_style }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class Panel::StylesController < ApplicationController
   def update
     respond_to do |format|
       if @panel_style.update(panel_style_params)
-        format.html { redirect_to @panel_style, notice: 'Style was successfully updated.' }
+        format.html { redirect_to edit_panel_style_path(1), notice: 'Style was successfully updated.' }
         format.json { render :show, status: :ok, location: @panel_style }
       else
         format.html { render :edit }
@@ -70,6 +70,6 @@ class Panel::StylesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def panel_style_params
-      params.require(:panel_style).permit(:nav_color, :footer_color, :a_color, :a_hover_color, :menu_color, :menu_hover_color, :nav_text_color, :footer_text_color)
+      params.require(:panel_style).permit(:nav_color, :footer_color, :a_color, :a_hover_color, :menu_color, :menu_hover_color, :nav_text_color, :footer_text_color, :custom_css)
     end
 end

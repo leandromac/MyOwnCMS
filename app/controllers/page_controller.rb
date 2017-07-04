@@ -12,7 +12,6 @@ class PageController < ApplicationController
   end
 
   def service
-    @panel_services = Panel::Service.all
   end
 
   def contact
