@@ -1,0 +1,10 @@
+/*
+
+*= require font-awesome
+*= require bootstrap_sb_admin_base_v2
+
+*/
+.nav > .view-site > a:hover, .nav > .view-site > a:focus {
+  text-decoration: none;
+  background-color: #31b0d5;
+}
