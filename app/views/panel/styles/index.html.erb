@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Panel Styles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nav color</th>
+      <th>Footer color</th>
+      <th>A color</th>
+      <th>A hover color</th>
+      <th>Menu color</th>
+      <th>Menu hover color</th>
+      <th>Nav text color</th>
+      <th>Footer text color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @panel_styles.each do |panel_style| %>
+      <tr>
+        <td><%= panel_style.nav_color %></td>
+        <td><%= panel_style.footer_color %></td>
+        <td><%= panel_style.a_color %></td>
+        <td><%= panel_style.a_hover_color %></td>
+        <td><%= panel_style.menu_color %></td>
+        <td><%= panel_style.menu_hover_color %></td>
+        <td><%= panel_style.nav_text_color %></td>
+        <td><%= panel_style.footer_text_color %></td>
+        <td><%= link_to 'Show', panel_style %></td>
+        <td><%= link_to 'Edit', edit_panel_style_path(panel_style) %></td>
+        <td><%= link_to 'Destroy', panel_style, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Style', new_panel_style_path %>

@@ -1,0 +1,49 @@
+<%= form_for(@panel_style) do |f| %>
+  <% if @panel_style.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@panel_style.errors.count, "error") %> prohibited this panel_style from being saved:</h2>
+
+      <ul>
+      <% @panel_style.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nav_color %><br>
+    <%= f.text_field :nav_color %>
+  </div>
+  <div class="field">
+    <%= f.label :footer_color %><br>
+    <%= f.text_field :footer_color %>
+  </div>
+  <div class="field">
+    <%= f.label :a_color %><br>
+    <%= f.text_field :a_color %>
+  </div>
+  <div class="field">
+    <%= f.label :a_hover_color %><br>
+    <%= f.text_field :a_hover_color %>
+  </div>
+  <div class="field">
+    <%= f.label :menu_color %><br>
+    <%= f.text_field :menu_color %>
+  </div>
+  <div class="field">
+    <%= f.label :menu_hover_color %><br>
+    <%= f.text_field :menu_hover_color %>
+  </div>
+  <div class="field">
+    <%= f.label :nav_text_color %><br>
+    <%= f.text_field :nav_text_color %>
+  </div>
+  <div class="field">
+    <%= f.label :footer_text_color %><br>
+    <%= f.text_field :footer_text_color %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

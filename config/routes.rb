@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :panel do
+    resources :styles
+  end
   get 'panel/home'
 
   devise_for :users

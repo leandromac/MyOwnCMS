@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170703000537) do
+ActiveRecord::Schema.define(version: 20170704173200) do
 
   create_table "panel_abouts", force: :cascade do |t|
     t.string   "image"
@@ -45,6 +45,19 @@ ActiveRecord::Schema.define(version: 20170703000537) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "panel_styles", force: :cascade do |t|
+    t.string   "nav_color"
+    t.string   "footer_color"
+    t.string   "a_color"
+    t.string   "a_hover_color"
+    t.string   "menu_color"
+    t.string   "menu_hover_color"
+    t.string   "nav_text_color"
+    t.string   "footer_text_color"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "users", force: :cascade do |t|
