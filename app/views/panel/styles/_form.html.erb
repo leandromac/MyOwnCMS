@@ -11,39 +11,77 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :nav_color %><br>
-    <%= f.text_field :nav_color %>
+<div class="row">
+  <div class="col-lg-12">
+
+    <h1 class="page-header">
+      <small><i class="fa fa-magic"></i> Style theme</small>
+      <%= f.submit 'Save changes', class: 'btn btn-success btn-sm pull-right' %>
+
+    </h1>
+
   </div>
-  <div class="field">
-    <%= f.label :footer_color %><br>
-    <%= f.text_field :footer_color %>
+</div>
+
+<div class="row well well-sm">
+  <h4 class="text-center">Custom your site</h4>
+
+  <div class="col-lg-3">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Navbar:</span>
+      <%= f.color_field :nav_color, class: 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :a_color %><br>
-    <%= f.text_field :a_color %>
+
+  <div class="col-lg-3">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Navbar text:</span>
+      <%= f.color_field :nav_text_color, class: 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :a_hover_color %><br>
-    <%= f.text_field :a_hover_color %>
+
+  <div class="col-lg-3">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Menu:</span>
+      <%= f.color_field :menu_color, class: 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :menu_color %><br>
-    <%= f.text_field :menu_color %>
+
+  <div class="col-lg-3">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Menu hover:</span>
+      <%= f.color_field :menu_hover_color, class: 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :menu_hover_color %><br>
-    <%= f.text_field :menu_hover_color %>
+
+  <div class="col-lg-3">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Footer:</span>
+      <%= f.color_field :footer_color, class: 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :nav_text_color %><br>
-    <%= f.text_field :nav_text_color %>
+
+  <div class="col-lg-3">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Footer text:</span>
+      <%= f.color_field :footer_text_color, class: 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :footer_text_color %><br>
-    <%= f.text_field :footer_text_color %>
+
+  <div class="col-lg-3">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Link:</span>
+      <%= f.color_field :a_color, class: 'form-control' %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="col-lg-3">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Link hover:</span>
+      <%= f.color_field :a_hover_color, class: 'form-control' %>
+    </div>
   </div>
+
+</div>
+
 <% end %>
