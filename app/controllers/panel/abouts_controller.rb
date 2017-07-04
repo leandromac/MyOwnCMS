@@ -29,7 +29,7 @@ class Panel::AboutsController < ApplicationController
 
     respond_to do |format|
       if @panel_about.save
-        format.html { redirect_to @panel_about, notice: 'About was successfully created.' }
+        format.html { redirect_to edit_panel_about_path(1), notice: 'About was successfully created.' }
         format.json { render :show, status: :created, location: @panel_about }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class Panel::AboutsController < ApplicationController
   def update
     respond_to do |format|
       if @panel_about.update(panel_about_params)
-        format.html { redirect_to @panel_about, notice: 'About was successfully updated.' }
+        format.html { redirect_to edit_panel_about_path(1), notice: 'About was successfully updated.' }
         format.json { render :show, status: :ok, location: @panel_about }
       else
         format.html { render :edit }

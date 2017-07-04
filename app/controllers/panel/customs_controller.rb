@@ -30,7 +30,7 @@ class Panel::CustomsController < ApplicationController
 
     respond_to do |format|
       if @panel_custom.save
-        format.html { redirect_to @panel_custom, notice: 'Custom was successfully created.' }
+        format.html { redirect_to edit_panel_custom_path(1), notice: 'Custom was successfully created.' }
         format.json { render :show, status: :created, location: @panel_custom }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class Panel::CustomsController < ApplicationController
   def update
     respond_to do |format|
       if @panel_custom.update(panel_custom_params)
-        format.html { redirect_to @panel_custom, notice: 'Custom was successfully updated.' }
+        format.html { redirect_to edit_panel_custom_path(1), notice: 'Custom was successfully updated.' }
         format.json { render :show, status: :ok, location: @panel_custom }
       else
         format.html { render :edit }
