@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :panel do
+    resources :slides
+  end
+  namespace :panel do
     resources :styles
   end
   get 'panel/home'

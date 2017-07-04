@@ -1,0 +1,40 @@
+<%= form_for(@panel_slide) do |f| %>
+  <% if @panel_slide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@panel_slide.errors.count, "error") %> prohibited this panel_slide from being saved:</h2>
+
+      <ul>
+      <% @panel_slide.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="well well-sm">
+  <h4>Create a new slide</h4>
+
+    <div class="form-group input-group">
+      <span class="input-group-addon">Link:</span>
+      <%= f.text_field :link, class: 'form-control', placeholder: 'URL' %>
+    </div>
+
+    <div class="form-group input-group">
+      <span class="input-group-addon">Image:</span>
+      <%= f.text_field :image, class: 'form-control', placeholder: 'URL' %>
+    </div>
+
+    <div class="form-group input-group">
+      <span class="input-group-addon">Title:</span>
+      <%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.text_field :description, class: 'form-control', placeholder: 'Description' %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit 'Save slide', class: 'btn btn-success btn-block' %>
+  </div>
+<% end %>
+</div>

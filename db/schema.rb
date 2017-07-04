@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170704182837) do
+ActiveRecord::Schema.define(version: 20170704223121) do
 
   create_table "panel_abouts", force: :cascade do |t|
     t.string   "image"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 20170704182837) do
     t.string   "image"
     t.string   "title"
     t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "panel_slides", force: :cascade do |t|
+    t.string   "link"
+    t.string   "image"
+    t.string   "title"
+    t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

@@ -32,7 +32,10 @@
                         <i class="fa fa-user fa-fw"></i> <%= current_user.email %> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li>
+                          <%= link_to edit_user_registration_path do %>
+                            <i class="fa fa-user fa-fw"></i> User Profile
+                          <% end %>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
@@ -70,6 +73,11 @@
                         <li>
                           <%= link_to panel_services_path do %>
                             <i class="fa fa-th"></i> Services
+                          <% end %>
+                        </li>
+                        <li>
+                          <%= link_to panel_slides_path do %>
+                            <i class="fa fa-desktop"></i> Slideshow
                           <% end %>
                         </li>
                         <li>

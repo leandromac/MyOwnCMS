@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @panel_slide.link %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @panel_slide.image %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @panel_slide.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @panel_slide.description %>
+</p>
+
+<%= link_to 'Edit', edit_panel_slide_path(@panel_slide) %> |
+<%= link_to 'Back', panel_slides_path %>
