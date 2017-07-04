@@ -4,6 +4,7 @@ class PageController < ApplicationController
   layout 'site'
 
   def home
+
   end
 
   def about
@@ -20,6 +21,7 @@ class PageController < ApplicationController
   def site_home
     @panel_customs = Panel::Custom.all
     @panel_services = Panel::Service.all
+    @panel_styles = Panel::Style.all
   end
 
 end
