@@ -1,6 +1,6 @@
 class Panel::CustomsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_panel_custom, only: [:show, :edit, :update, :destroy]
+  before_action :set_panel_custom, only: [:show, :edit, :update]
   layout 'panel'
 
   # GET /panel/customs
