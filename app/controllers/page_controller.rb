@@ -4,11 +4,9 @@ class PageController < ApplicationController
   layout 'site'
 
   def home
-
   end
 
   def about
-    @panel_abouts = Panel::About.all
   end
 
   def service
@@ -22,6 +20,7 @@ class PageController < ApplicationController
     @panel_services = Panel::Service.all
     @panel_styles = Panel::Style.all
     @panel_slides = Panel::Slide.all
+    @panel_abouts = Panel::About.all
   end
 
 end

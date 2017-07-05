@@ -10,15 +10,17 @@
   <div class="col s12 m8 offset-m2 l6 offset-l3">
     <div class="card-panel grey lighten-5 z-depth-1">
       <div class="row valign-wrapper">
+      <% @panel_abouts.each do |panel_about| %>
         <div class="col s2">
-          <img src="http://lorempixel.com/400/400/cats/" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <img src="<%= panel_about.image %>" alt="" class="img-rounded responsive-img", style="width:130px;height:87px"> <!-- notice the "circle" class -->
         </div>
         <div class="col s10">
           <span class="black-text">
-            <h4 class="flow-text" style="margin: 0px">Gatonildo Miow</h4>
-            <%= panel_custom.about %>
+            <h4 class="flow-text" style="margin: 0px"><%= panel_about.title %></h4>
+            <%= truncate(panel_about.about, length: 300) { link_to "[Continue]", page_about_path } %>
           </span>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
