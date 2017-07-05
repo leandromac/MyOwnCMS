@@ -30,9 +30,10 @@ gem 'materialize-sass'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem "paperclip", "~> 5.0.0"
+# Create beautiful JavaScript charts with one line of Ruby http://chartkick.com
+gem "chartkick"
 # Use Unicorn as the app server
 # gem 'unicorn'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
