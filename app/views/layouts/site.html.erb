@@ -10,13 +10,18 @@
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-
+<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <% @panel_styles.each do |panel_style| %>
     <style>
+      /* Import Google Font */
+      @import url('<%= panel_style.font_link %>');
+      body {
+        font-family: <%= panel_style.font_family.to_s %>
+      }
       nav {
         background-color: <%= panel_style.nav_color %> !important;
       }

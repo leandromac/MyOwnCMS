@@ -32,9 +32,6 @@
       <span class="input-group-addon">Navbar:</span>
       <%= f.color_field :nav_color, class: 'form-control' %>
     </div>
-  </div>
-
-  <div class="col-lg-3">
     <div class="form-group input-group">
       <span class="input-group-addon">Footer:</span>
       <%= f.color_field :footer_color, class: 'form-control' %>
@@ -46,12 +43,20 @@
       <span class="input-group-addon">Link:</span>
       <%= f.color_field :a_color, class: 'form-control' %>
     </div>
+    <div class="form-group input-group">
+      <span class="input-group-addon">Hover:</span>
+      <%= f.color_field :a_hover_color, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="col-lg-3">
+  <div class="col-lg-6">
     <div class="form-group input-group">
-      <span class="input-group-addon">Link hover:</span>
-      <%= f.color_field :a_hover_color, class: 'form-control' %>
+      <span class="input-group-addon">Google Font URL:</span>
+      <%= f.text_field :font_link, class: 'form-control', placeholder: 'ex: https://fonts.googleapis.com/css?family=Bellefair', disabled: 'disabled' %>
+    </div>
+    <div class="form-group input-group">
+      <span class="input-group-addon">Google Font Family:</span>
+      <%= f.text_field :font_family, class: 'form-control', placeholder: "ex: 'Bellefair', serif;", disabled: 'disabled' %>
     </div>
   </div>
 
