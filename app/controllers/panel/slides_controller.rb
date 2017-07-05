@@ -1,4 +1,4 @@
-class Panel::SlidesController < ApplicationController
+class Panel::SlidesController < PanelController
   before_action :set_panel_slide, only: [:show, :edit, :update, :destroy]
   layout 'panel'
   # GET /panel/slides

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @panel_client.image %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @panel_client.link %>
+</p>
+
+<%= link_to 'Edit', edit_panel_client_path(@panel_client) %> |
+<%= link_to 'Back', panel_clients_path %>

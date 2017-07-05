@@ -4,6 +4,7 @@ class PageController < ApplicationController
   layout 'site'
 
   def home
+    @panel_clients = Panel::Client.all
   end
 
   def about

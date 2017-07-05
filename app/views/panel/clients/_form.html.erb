@@ -1,0 +1,45 @@
+<%= form_for(@panel_client) do |f| %>
+  <% if @panel_client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@panel_client.errors.count, "error") %> prohibited this panel_client from being saved:</h2>
+
+      <ul>
+      <% @panel_client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="col-lg-12">
+
+    <h1 class="page-header">
+      <small><i class="fa fa-group"></i> Clients</small>
+    </h1>
+
+  </div>
+</div>
+<p id="notice"><%= notice %></p>
+
+<div class="row well well-sm">
+  <h4 class="text-center">Create a client</h4>
+  <div class="col-lg-6">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Image:</span>
+      <%= f.text_field :image, class: 'form-control', placeholder: 'Image' %>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="form-group input-group">
+      <span class="input-group-addon">Link:</span>
+      <%= f.text_field :link, class: 'form-control', placeholder: 'Link' %>
+    </div>
+  </div>
+
+    <div class="form-group">
+      <%= f.submit 'Save changes', class: 'btn btn-success btn-sm pull-right' %>
+    </div>
+  </div>
+
+<% end %>

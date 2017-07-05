@@ -51,24 +51,13 @@
   <h4 class="flow-text">Our Clients</h4>
   <div class="col s12 m8 offset-m2 l6 offset-l3">
       <div class="row valign-wrapper">
+        <% @panel_clients.each do |panel_client| %>
         <div class="col s2">
-          <img src="http://via.placeholder.com/400x400" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <a href="<%= panel_client.link %>" target="_blank">
+          <img src="<%= panel_client.image %>" alt="" class="circle responsive-img">
+          </a><!-- notice the "circle" class -->
         </div>
-        <div class="col s2">
-          <img src="http://via.placeholder.com/400x400" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-        </div>
-        <div class="col s2">
-          <img src="http://via.placeholder.com/400x400" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-        </div>
-        <div class="col s2">
-          <img src="http://via.placeholder.com/400x400" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-        </div>
-        <div class="col s2">
-          <img src="http://via.placeholder.com/400x400" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-        </div>
-        <div class="col s2">
-          <img src="http://via.placeholder.com/400x400" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-        </div>
+        <% end %>
       </div>
   </div>
 <% end %>

@@ -1,4 +1,4 @@
-class Panel::StylesController < ApplicationController
+class Panel::StylesController < PanelController
   before_action :set_panel_style, only: [:show, :edit, :update, :destroy]
   layout 'panel'
   # GET /panel/styles

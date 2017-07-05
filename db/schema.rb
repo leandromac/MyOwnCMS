@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705143335) do
+ActiveRecord::Schema.define(version: 20170705152031) do
 
   create_table "panel_abouts", force: :cascade do |t|
     t.string   "image"
     t.string   "title"
     t.text     "about"
     t.text     "blockquote"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "panel_clients", force: :cascade do |t|
+    t.string   "image"
+    t.string   "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

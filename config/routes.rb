@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :panel do
+    resources :clients
+  end
+  resources :clients
+  namespace :panel do
     resources :slides
   end
   namespace :panel do
