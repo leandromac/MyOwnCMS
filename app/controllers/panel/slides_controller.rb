@@ -1,6 +1,5 @@
 class Panel::SlidesController < PanelController
   before_action :set_panel_slide, only: [:show, :edit, :update, :destroy]
-  layout 'panel'
   # GET /panel/slides
   # GET /panel/slides.json
   def index

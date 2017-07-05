@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705152031) do
+ActiveRecord::Schema.define(version: 20170705183400) do
 
   create_table "panel_abouts", force: :cascade do |t|
     t.string   "image"
@@ -41,11 +41,15 @@ ActiveRecord::Schema.define(version: 20170705152031) do
     t.string   "instagram"
     t.string   "youtube"
     t.string   "linkedin"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.text     "text_contact"
     t.string   "footer_title"
     t.text     "footer_text"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   create_table "panel_services", force: :cascade do |t|

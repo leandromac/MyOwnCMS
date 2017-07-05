@@ -1,7 +1,6 @@
 class Panel::ServicesController < PanelController
   before_action :authenticate_user!
   before_action :set_panel_service, only: [:show, :edit, :update, :destroy]
-  layout 'panel'
 
   # GET /panel/services
   # GET /panel/services.json

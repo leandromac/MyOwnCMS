@@ -41,7 +41,12 @@
     <nav>
     <div class="container">
       <div class="nav-wrapper">
-        <%= link_to panel_custom.name, page_home_path, class: 'brand-logo' %>
+        <% if panel_custom.logo.blank? %>
+          <%= link_to panel_custom.name, page_home_path, class: 'brand-logo' %>
+        <% else %>
+          <%= image_tag panel_custom.logo.url(:medium), style: 'height: 60px' %>
+        <% end %>
+
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="<% if active == 'home' %>active<% end %>">

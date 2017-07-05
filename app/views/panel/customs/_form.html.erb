@@ -1,4 +1,5 @@
-<%= form_for(@panel_custom) do |f| %>
+<%#= form_for @user, url: users_path, html: { multipart: true } do |form| %>
+<%= form_for @panel_custom, html: { multipart: true } do |f| %>
   <% if @panel_custom.errors.any? %>
     <div id="error_explanation">
 
@@ -32,7 +33,7 @@
 
     <div class="form-group input-group">
       <span class="input-group-addon">Logo:</span>
-      <%= f.text_field :logo, class: 'form-control', placeholder: 'PNG preferential' %>
+      <%= f.file_field :logo, as: :file, class: 'form-control' %>
     </div>
 
     <div class="form-group input-group">
