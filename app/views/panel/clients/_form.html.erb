@@ -1,4 +1,4 @@
-<%= form_for(@panel_client) do |f| %>
+<%= form_for @panel_client, html: { multipart: true } do |f| %>
   <% if @panel_client.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@panel_client.errors.count, "error") %> prohibited this panel_client from being saved:</h2>
@@ -26,8 +26,8 @@
   <h4 class="text-center">Create a client</h4>
   <div class="col-lg-6">
     <div class="form-group input-group">
-      <span class="input-group-addon">Image:</span>
-      <%= f.text_field :image, class: 'form-control', placeholder: 'Image' %>
+      <span class="input-group-addon">Logo:</span>
+      <%= f.file_field :image, class: 'form-control' %>
     </div>
   </div>
   <div class="col-lg-6">

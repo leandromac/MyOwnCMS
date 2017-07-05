@@ -6,7 +6,7 @@
     <div class="panel panel-info">
         <div class="panel-body">
           <a href="<%= panel_client.link %>" target="_blank">
-            <img src="<%= panel_client.image %>" width="120" class="img-circle">
+            <%= image_tag panel_client.image.url, class: "img-circle", style: 'width: 120px' %>
           </a>
         </div>
         <div class="panel-footer">

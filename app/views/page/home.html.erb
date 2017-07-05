@@ -12,7 +12,7 @@
       <div class="row valign-wrapper">
       <% @panel_abouts.each do |panel_about| %>
         <div class="col s2">
-          <img src="<%= panel_about.image %>" alt="" class="img-rounded responsive-img", style="width:130px;height:87px"> <!-- notice the "circle" class -->
+          <%= image_tag panel_about.image.url(:medium), class: "img-rounded responsive-img", style: "width:130px;height:87px" %>
         </div>
         <div class="col s10">
           <span class="black-text">
@@ -33,7 +33,7 @@
       <div class="col s12 m3">
         <div class="card">
           <div class="card-image">
-            <img src="<%= panel_service.image %>">
+            <%= image_tag panel_service.image.url, class: 'img-rounded' %>
             <%= link_to panel_service, class: 'btn-floating halfway-fab waves-effect waves-light red' do %>
               <i class="material-icons">add</i>
             <% end %>
@@ -53,9 +53,9 @@
       <div class="row valign-wrapper">
         <% @panel_clients.each do |panel_client| %>
         <div class="col s2">
-          <a href="<%= panel_client.link %>" target="_blank">
-          <img src="<%= panel_client.image %>" alt="" class="circle responsive-img">
-          </a><!-- notice the "circle" class -->
+          <%= link_to panel_client.link, target: '_blank' do %>
+            <%= image_tag panel_client.image.url, class: "circle responsive-img" %>
+          <% end %><!-- notice the "circle" class -->
         </div>
         <% end %>
       </div>
