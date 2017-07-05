@@ -1,4 +1,4 @@
-<%= form_for(@panel_slide) do |f| %>
+<%= form_for @panel_slide, html: { multipart: true } do |f| %>
   <% if @panel_slide.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@panel_slide.errors.count, "error") %> prohibited this panel_slide from being saved:</h2>
@@ -21,7 +21,7 @@
 
     <div class="form-group input-group">
       <span class="input-group-addon">Image:</span>
-      <%= f.text_field :image, class: 'form-control', placeholder: 'URL' %>
+      <%= f.file_field :image, class: 'form-control' %>
     </div>
 
     <div class="form-group input-group">
