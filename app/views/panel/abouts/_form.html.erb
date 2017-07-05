@@ -1,4 +1,4 @@
-<%= form_for(@panel_about) do |f| %>
+<%= form_for @panel_about, html: { multipart: true } do |f| %>
   <% if @panel_about.errors.any? %>
     <div id="error_explanation">
 
@@ -33,8 +33,8 @@
 
   <div class="col-lg-6">
     <div class="form-group input-group">
-      <span class="input-group-addon">Cover photo:</span>
-      <%= f.text_field :image, class: 'form-control', placeholder: 'Image' %>
+      <span class="input-group-addon">Cover image:</span>
+      <%= f.file_field :image, class: 'form-control', placeholder: 'Image' %>
     </div>
 
   </div>
