@@ -39,20 +39,18 @@
 
   </div>
 
+<div class="col-lg-12">
+    <div class="form-group">
+      <label>About:</label>
+      <%= f.text_area :about, class: 'form-control', placeholder: 'About...', rows: '4' %>
+    </div>
+  </div>
+
   <div class="col-lg-12">
     <div class="form-group">
       <label>Impact text:</label>
       <%= f.text_area :blockquote, class: 'form-control', placeholder: 'Impact text...', rows: '2' %>
     </div>
-  </div>
-
-  <div class="col-lg-6">
-    <div class="form-group">
-      <label>Will be sent to this email:</label>
-      <input class="form-control" id="disabledInput" type="text" placeholder="<%= current_user.email %>" disabled="">
-      <p class="help-block">You can to change it in <%= link_to "Settings", edit_panel_custom_path(1) %> menu.</p>
-    </div>
-
   </div>
 
 </div>
