@@ -113,12 +113,23 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
+
       © <%= Date.today.year %> Copyright - <%= panel_custom.name %>
-      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.linkedin %>" target="_blank">LinkedIn</a>
-      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.youtube %>" target="_blank">Youtube</a>
-      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.instagram %>" target="_blank">Instagram</a>
-      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.twitter %>" target="_blank">Twitter</a>
-      <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.facebook %>" target="_blank">Facebook</a>
+      <% unless panel_custom.linkedin.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.linkedin %>" target="_blank">LinkedIn</a>
+      <% end %>
+      <% unless panel_custom.youtube.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.youtube %>" target="_blank">Youtube</a>
+      <% end %>
+      <% unless panel_custom.instagram.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.instagram %>" target="_blank">Instagram</a>
+      <% end %>
+      <% unless panel_custom.twitter.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.twitter %>" target="_blank">Twitter</a>
+      <% end %>
+      <% unless panel_custom.facebook.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.facebook %>" target="_blank">Facebook</a>
+      <% end %>
       </div>
     </div>
   </footer>
