@@ -51,11 +51,11 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
-
+<%= active_panel %>
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li>
+                        <li class="<% if active_panel == 'panel' %>active<% end %>">
                           <%= link_to panel_home_path do %>
                             <i class="fa fa-dashboard fa-fw"></i> Home
                           <% end %>

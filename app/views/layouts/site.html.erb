@@ -51,16 +51,16 @@
 
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="<% if active == 'home' %>active<% end %>">
+          <li class="<% if active_page == 'home' %>active<% end %>">
             <%= link_to "Home", page_home_path %>
           </li>
-          <li class="<% if active == 'about' %>active<% end %>">
+          <li class="<% if active_page == 'about' %>active<% end %>">
             <%= link_to "About", page_about_path %>
           </li>
-          <li class="<% if active == 'service' %>active<% end %>">
+          <li class="<% if active_page == 'service' %>active<% end %>">
             <%= link_to "Services", page_service_path %>
           </li>
-          <li class="<% if active == 'contact' %>active<% end %>">
+          <li class="<% if active_page == 'contact' %>active<% end %>">
             <%= link_to "Contact", page_contact_path %>
           </li>
         </ul>
