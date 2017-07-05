@@ -54,15 +54,18 @@
   </div>
 
   <div class="col-lg-6">
+
     <div class="form-group">
-      <label>About Us</label>
-      <%= f.text_area :about, class: 'form-control', rows: '7' %>
+      <label>Footer title</label>
+      <%= f.text_field :footer_title, class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <label>Text Contact</label>
-      <%= f.text_field :text_contact, class: 'form-control' %>
+      <label>Footer text</label>
+      <%= f.text_area :footer_text, class: 'form-control', rows: '7' %>
     </div>
+
+
   </div>
 </div>
 

@@ -71,6 +71,6 @@ class Panel::CustomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def panel_custom_params
-      params.require(:panel_custom).permit(:name, :logo, :phone, :email, :address, :about, :facebook, :twitter, :instagram, :youtube, :linkedin, :text_contact)
+      params.require(:panel_custom).permit(:name, :logo, :phone, :email, :address, :about, :facebook, :twitter, :instagram, :youtube, :linkedin, :text_contact, :footer_title, :footer_text)
     end
 end
