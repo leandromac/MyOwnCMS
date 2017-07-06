@@ -20,6 +20,11 @@ class Panel::CustomsController < PanelController
 
   # GET /panel/customs/1/edit
   def edit
+    if @panel_custom.blank?
+      redirect_to new_panel_custom_path
+    else
+      redirect_to edit_panel_custom_path(1)
+    end
   end
 
   # POST /panel/customs

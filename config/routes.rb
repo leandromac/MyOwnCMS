@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
-  namespace :panel do
-    resources :clients
-  end
-  resources :clients
-  namespace :panel do
-    resources :slides
-  end
-  namespace :panel do
-    resources :styles
-  end
+
+  root :to => 'page#home'
+
   get 'panel/home'
 
   devise_for :users,
@@ -16,25 +9,23 @@ Rails.application.routes.draw do
       sessions: 'users/sessions',
       registrations: 'users/registrations'
     }
-  namespace :panel do
-    resources :services
-  end
-  namespace :panel do
-    resources :abouts
-  end
-  namespace :panel do
-    resources :customs
-  end
+
   namespace :dashboard do
     resources :homes
   end
-  root :to => 'page#home'
+
+  namespace :panel do
+    resources :customs
+    resources :abouts
+    resources :services
+    resources :clients
+    resources :slides
+    resources :styles
+  end
+
   get 'page/home'
-
   get 'page/about'
-
   get 'page/service'
-
   get 'page/contact'
 
   # The priority is based upon order of creation: first created -> highest priority.

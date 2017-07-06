@@ -5,8 +5,6 @@ ruby '2.3.4'
 gem 'rails', '4.2.6'
 # Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
-# Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -42,6 +40,8 @@ gem 'faker'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :development do
