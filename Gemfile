@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.3.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -32,6 +32,8 @@ gem 'materialize-sass'
 gem "paperclip", "~> 5.0.0"
 # Create beautiful JavaScript charts with one line of Ruby http://chartkick.com
 gem "chartkick"
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
 # Use Unicorn as the app server
 # gem 'unicorn'
 # Use Capistrano for deployment
@@ -50,3 +52,8 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  # Instalando o Postgresql em modo de produção
+  gem 'pg'
+  gem 'rails_12factor'
+end
