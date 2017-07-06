@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   get 'panel/home'
 
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
   namespace :panel do
     resources :services
   end
