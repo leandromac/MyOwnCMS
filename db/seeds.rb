@@ -23,7 +23,7 @@ Panel::Custom.create(
   instagram: 'http://instagram.com',
   youtube: 'http://youtube.com',
   linkedin: 'http://linkedin.com',
-  text_contact: Faker::Lorem.sentences(2),
+  text_contact: 'Veniam consequatur deserunt rerum. Consequuntur vitae saepe placeat voluptatem et repellendus necessitatibus.',
   footer_title: 'We are what you need',
   footer_text: Faker::Lorem.paragraph(2),
 )
