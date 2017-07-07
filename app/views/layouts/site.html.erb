@@ -7,6 +7,9 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  
+  <link rel="shortcut icon" href="<%= panel_custom.favicon %>" type="image/x-icon">
+  <link rel="icon" href="<%= panel_custom.favicon %>" type="image/x-icon">
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
@@ -34,7 +37,6 @@
 
 </head>
 <body>
-
 
 <!-- START NAVBAR -->
   <div class="navbar-fixed">

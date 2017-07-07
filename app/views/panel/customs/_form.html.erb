@@ -32,8 +32,13 @@
     </div>
 
     <div class="form-group input-group">
-      <span class="input-group-addon">Logo:</span>
+      <span class="input-group-addon">Logo (PNG):</span>
       <%= f.file_field :logo, as: :file, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group input-group">
+      <span class="input-group-addon">Favicon (ICO):</span>
+      <%= f.file_field :favicon, as: :file, class: 'form-control' %>
     </div>
 
     <div class="form-group input-group">
@@ -63,7 +68,12 @@
 
     <div class="form-group">
       <label>Footer text</label>
-      <%= f.text_area :footer_text, class: 'form-control', rows: '7' %>
+      <%= f.text_area :footer_text, class: 'form-control', rows: '5' %>
+    </div>
+    
+    <div class="form-group">
+      <label>Contact text</label>
+      <%= f.text_area :text_contact, class: 'form-control', rows: '2' %>
     </div>
 
 
