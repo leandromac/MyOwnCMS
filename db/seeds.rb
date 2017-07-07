@@ -25,14 +25,40 @@ Panel::Custom.create(
   linkedin: 'http://linkedin.com',
   text_contact: Faker::Lorem.sentences,
   footer_title: 'We are what you need',
-  footer_text: Faker::Lorem.paragraph,
+  footer_text: Faker::Lorem.paragraph(2),
 )
 
 Panel::About.create(
   title: Faker::Lorem.sentence,
   about: Faker::Lorem.paragraphs,
   blockquote: Faker::Lorem.sentence,
+  image: File.new(Rails.root.join('public', 'system', 'images_default', "about_default.png"), 'r'),
 )
 
+12.times do
+  Panel::Service.create(
+    title: Faker::Lorem.word,
+    description: Faker::Lorem.paragraphs,
+    image: File.new(Rails.root.join('public', 'system', 'images_default', "service_default.png"), 'r'),
+  )
+end
+
+8.times do
+  Panel::Client.create(
+    link: Faker::Internet.url,
+    image: File.new(Rails.root.join('public', 'system', 'images_default', "default_image.png"), 'r'),
+  )
+end
+
+6.times do
+  Panel::Slide.create(
+    title: Faker::Lorem.word,
+    link: Faker::Internet.url,
+    image: File.new(Rails.root.join('public', 'system', 'images_default', "slide_default.png"), 'r'),
+  )
+end
+
 Panel::Style.create(
+  nav_color: '#597584',
+  footer_color: '#597584',
 )
