@@ -6,6 +6,9 @@
   <title><%= panel_custom.name %></title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+
+  <%#= favicon_link_tag '<%= panel_custom.favicon' %>
+
   <%= csrf_meta_tags %>
   
   <link rel="shortcut icon" href="<%= panel_custom.favicon %>" type="image/x-icon">
@@ -15,7 +18,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <% @panel_styles.each do |panel_style| %>
@@ -37,7 +39,10 @@
 
 </head>
 <body>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 46bc14a7d20a84967976098a82cbd28de2b30780
 <!-- START NAVBAR -->
   <div class="navbar-fixed">
     <nav>
@@ -159,7 +164,6 @@
     $(document).ready(function() {
       Materialize.updateTextFields();
     });
-
   </script>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

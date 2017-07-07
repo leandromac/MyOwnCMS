@@ -20,6 +20,11 @@ class Panel::CustomsController < PanelController
 
   # GET /panel/customs/1/edit
   def edit
+    if @panel_custom.blank?
+      redirect_to new_panel_custom_path
+    else
+      redirect_to edit_panel_custom_path(1)
+    end
   end
 
   # POST /panel/customs
@@ -70,6 +75,14 @@ class Panel::CustomsController < PanelController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def panel_custom_params
+<<<<<<< HEAD
       params.require(:panel_custom).permit(:name, :logo, :phone, :email, :address, :about, :facebook, :twitter, :instagram, :youtube, :linkedin, :text_contact, :footer_title, :footer_text, :favicon)
+=======
+      params.require(:panel_custom).permit(
+        :name, :logo, :phone, :email, :address, :about, :facebook, :twitter,
+        :instagram, :youtube, :linkedin, :text_contact, :footer_title,
+        :footer_text, :favicon
+      )
+>>>>>>> 46bc14a7d20a84967976098a82cbd28de2b30780
     end
 end
