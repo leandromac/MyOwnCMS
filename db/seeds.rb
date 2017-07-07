@@ -23,7 +23,7 @@ Panel::Custom.create(
   instagram: 'http://instagram.com',
   youtube: 'http://youtube.com',
   linkedin: 'http://linkedin.com',
-  text_contact: Faker::Lorem.sentences,
+  text_contact: Faker::Lorem.sentences(2),
   footer_title: 'We are what you need',
   footer_text: Faker::Lorem.paragraph(2),
 )
@@ -37,8 +37,8 @@ Panel::About.create(
 
 12.times do
   Panel::Service.create(
-    title: Faker::Lorem.word,
-    description: Faker::Lorem.paragraphs,
+    title: "# Service #{Random.rand(12)}",
+    description: 'Dolorem animi ut eius voluptatibus sed. Officia facilis voluptates quo repellendus omnis fugiat. Adipisci dicta officia sit enim nulla et. Nihil aspernatur sit aperiam voluptatem praesentium. Laudantium qui aperiam corrupti dolor.", "Facilis ducimus autem excepturi et. Sequi consectetur qui eos veritatis.',
     image: File.new(Rails.root.join('public', 'system', 'images_default', "service_default.png"), 'r'),
   )
 end
