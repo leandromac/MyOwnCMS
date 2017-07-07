@@ -5,6 +5,7 @@ class PageController < ApplicationController
 
   def home
     @panel_clients = Panel::Client.all
+    @panel_slides = Panel::Slide.all
   end
 
   def about
@@ -20,7 +21,6 @@ class PageController < ApplicationController
     @panel_customs = Panel::Custom.all
     @panel_services = Panel::Service.all
     @panel_styles = Panel::Style.all
-    @panel_slides = Panel::Slide.all
     @panel_abouts = Panel::About.all
   end
 

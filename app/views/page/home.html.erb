@@ -1,4 +1,5 @@
 <% @panel_customs.each do |panel_custom| %>
+
 <div class="carousel carousel-slider center" data-indicators="true">
   <% @panel_slides.each do |panel_slide| %>
     <a class="carousel-item" href="<%= panel_slide.link %>">
@@ -7,16 +8,18 @@
   <% end %>
   </div>
 
+
+
   <div class="col s12 m8 offset-m2 l6 offset-l3">
     <div class="card-panel grey lighten-5 z-depth-1">
       <div class="row valign-wrapper">
       <% @panel_abouts.each do |panel_about| %>
-        <div class="col s2">
-          <%= image_tag panel_about.image.url(:medium), class: "img-rounded responsive-img", style: "width:130px;height:87px" %>
+      <div class="col s2">
+        <%= image_tag panel_about.image.url(:medium), class: "img-rounded responsive-img", style: "width:130px;height:87px" %>
         </div>
         <div class="col s10">
           <span class="black-text">
-            <h4 class="flow-text" style="margin: 0px"><%= panel_about.title %></h4>
+          <h4 class="flow-text" style="margin: 0px"><%= panel_about.title %></h4>
             <%= truncate(panel_about.about, length: 300) { link_to "[Continue]", page_about_path } %>
           </span>
         </div>

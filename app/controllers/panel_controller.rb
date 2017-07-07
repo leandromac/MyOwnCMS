@@ -1,5 +1,6 @@
 class PanelController < ApplicationController
   before_action :authenticate_user!
+
   layout 'panel'
 
   def home
@@ -7,6 +8,6 @@ class PanelController < ApplicationController
     @panel_clients = Panel::Client.all
     @panel_slides = Panel::Slide.all
 
-    @panel_slides_groups = Panel::Slide.all.collect {|c| [c.image]}.count
+    @panel_slides_groups = Panel::Slide.all.collect{|c| [c.image]}.count
   end
 end
