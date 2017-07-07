@@ -6,6 +6,9 @@
   <title><%= panel_custom.name %></title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+
+  <%#= favicon_link_tag '<%= panel_custom.favicon' %>
+
   <%= csrf_meta_tags %>
 
   <!-- Compiled and minified CSS -->
@@ -33,7 +36,6 @@
 
 </head>
 <body>
-
 <!-- START NAVBAR -->
   <div class="navbar-fixed">
     <nav>
@@ -155,7 +157,6 @@
     $(document).ready(function() {
       Materialize.updateTextFields();
     });
-
   </script>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
