@@ -1,6 +1,8 @@
 class Panel::AboutsController < PanelController
   before_action :authenticate_user!
   before_action :set_panel_about, only: [:show, :edit, :update, :destroy]
+  before_action :panel_custom, only: [:edit, :update]
+  
   # GET /panel/abouts
   # GET /panel/abouts.json
   def index
@@ -19,6 +21,7 @@ class Panel::AboutsController < PanelController
 
   # GET /panel/abouts/1/edit
   def edit
+    @panel_abouts = Panel::About.all
   end
 
   # POST /panel/abouts
@@ -61,6 +64,9 @@ class Panel::AboutsController < PanelController
     end
   end
 
+  def panel_custom
+    @panel_customs = Panel::Custom.all
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_panel_about

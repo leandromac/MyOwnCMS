@@ -1,16 +1,8 @@
 <% @panel_customs.each do |panel_custom| %>
-<<<<<<< HEAD
 <div class="carousel carousel-slider center" data-indicators="false">
   <% @panel_slides.each do |panel_slide| %>
     <a class="carousel-item" href="<%= panel_slide.link %>">
       <img src="<%= panel_slide.image %>" width="100%" height="400">
-=======
-
-<div class="carousel carousel-slider center" data-indicators="true">
-  <% @panel_slides.each do |panel_slide| %>
-    <a class="carousel-item" href="<%= panel_slide.link %>">
-      <img src="<%= panel_slide.image %>" width="800" height="400">
->>>>>>> 46bc14a7d20a84967976098a82cbd28de2b30780
     </a>
   <% end %>
 </div>

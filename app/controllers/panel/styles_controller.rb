@@ -1,5 +1,7 @@
 class Panel::StylesController < PanelController
   before_action :set_panel_style, only: [:show, :edit, :update, :destroy]
+  before_action :panel_custom, only: [:index, :edit, :update]
+
   # GET /panel/styles
   # GET /panel/styles.json
   def index
@@ -18,7 +20,6 @@ class Panel::StylesController < PanelController
 
   # GET /panel/styles/1/edit
   def edit
-
   end
 
   # POST /panel/styles
@@ -59,6 +60,10 @@ class Panel::StylesController < PanelController
       format.html { redirect_to panel_styles_url, notice: 'Style was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def panel_custom
+    @panel_customs = Panel::Custom.all
   end
 
   private

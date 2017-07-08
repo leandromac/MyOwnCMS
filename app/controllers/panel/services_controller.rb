@@ -1,6 +1,8 @@
 class Panel::ServicesController < PanelController
   before_action :authenticate_user!
   before_action :set_panel_service, only: [:show, :edit, :update, :destroy]
+  before_action :panel_custom, only: [:index, :edit, :update]
+
 
   # GET /panel/services
   # GET /panel/services.json
@@ -62,6 +64,10 @@ class Panel::ServicesController < PanelController
       format.html { redirect_to panel_services_url, notice: 'Service was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def panel_custom
+    @panel_customs = Panel::Custom.all
   end
 
   private

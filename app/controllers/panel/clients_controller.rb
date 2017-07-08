@@ -1,5 +1,7 @@
 class Panel::ClientsController < PanelController
   before_action :set_panel_client, only: [:show, :edit, :update, :destroy]
+  before_action :panel_custom, only: [:index, :edit, :update]
+
   # GET /panel/clients
   # GET /panel/clients.json
   def index
@@ -60,6 +62,10 @@ class Panel::ClientsController < PanelController
       format.html { redirect_to panel_clients_url, notice: 'Client was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def panel_custom
+    @panel_customs = Panel::Custom.all
   end
 
   private

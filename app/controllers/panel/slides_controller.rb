@@ -1,5 +1,6 @@
 class Panel::SlidesController < PanelController
   before_action :set_panel_slide, only: [:show, :edit, :update, :destroy]
+  before_action :panel_custom, only: [:index, :edit, :update]
   # GET /panel/slides
   # GET /panel/slides.json
   def index
@@ -60,6 +61,10 @@ class Panel::SlidesController < PanelController
       format.html { redirect_to panel_slides_url, notice: 'Slide was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def panel_custom
+    @panel_customs = Panel::Custom.all  
   end
 
   private

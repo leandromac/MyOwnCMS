@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707224045) do
+ActiveRecord::Schema.define(version: 20170707221117) do
 
   create_table "panel_abouts", force: :cascade do |t|
     t.string   "image"
