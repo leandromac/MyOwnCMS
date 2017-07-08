@@ -10,12 +10,12 @@
   <%#= favicon_link_tag '<%= panel_custom.favicon' %>
 
   <%= csrf_meta_tags %>
-  
+
   <link rel="shortcut icon" href="<%= panel_custom.favicon %>" type="image/x-icon">
   <link rel="icon" href="<%= panel_custom.favicon %>" type="image/x-icon">
  <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-          
+
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
@@ -61,16 +61,16 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="<% if active_page == 'home' %>active<% end %>">
-            <%= link_to "Home", page_home_path('resource', @resource, data: { no_turbolink: true }) %>
+            <%= link_to t('menu.home'), page_home_path('resource', @resource, data: { no_turbolink: true }) %>
           </li>
           <li class="<% if active_page == 'about' %>active<% end %>">
-            <%= link_to "About", page_about_path %>
+            <%= link_to t('menu.about'), page_about_path %>
           </li>
           <li class="<% if active_page == 'service' %>active<% end %>">
-            <%= link_to "Services", page_service_path %>
+            <%= link_to t('menu.services'), page_service_path %>
           </li>
           <li class="<% if active_page == 'contact' %>active<% end %>">
-            <%= link_to "Contact", page_contact_path %>
+            <%= link_to t('menu.contact'), page_contact_path %>
           </li>
         </ul>
 
@@ -113,14 +113,14 @@
           </p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Contact us</h5>
+          <h5 class="white-text"><%= t('title.contact') %></h5>
           <ul>
-            <li>Phone:
+            <li><%= t('contact.phone') %>:
               <a class="white-text text-lighten-3" disable="disable">
                 <%= panel_custom.phone %>
               </a>
             </li>
-            <li>Email:
+            <li><%= t('contact.email') %>:
               <a class="grey-text text-lighten-3" href="mailto:<%= panel_custom.email %>">
                 <%= panel_custom.email %>
               </a>

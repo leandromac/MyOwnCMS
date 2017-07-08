@@ -1,0 +1,20 @@
+"pt-BR":
+  menu:
+    home: "Início"
+    about: "Sobre mim"
+    services: "Serviços"
+    contact: "Fale Conosco"
+  title:
+    about: "Sobre mim"
+    services: "Serviços"
+    contact: "Fale Conosco"
+    clients: "Clientes"
+  form:
+    name: "Nome completo"
+    email: "Email válido"
+    message: "Mensagem"
+    send: "Enviar"
+  contact:
+    phone: "Telefone"
+    email: "Email"
+    address: "Endereço"
