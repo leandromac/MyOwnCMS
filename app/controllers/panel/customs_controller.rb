@@ -29,7 +29,7 @@ class Panel::CustomsController < PanelController
 
     respond_to do |format|
       if @panel_custom.save
-        format.html { redirect_to edit_panel_custom_path(1), notice: 'Custom was successfully created.' }
+        format.html { redirect_to edit_panel_custom_path(1), notice: "#{t('panel.alert.create')}" }
         format.json { render :show, status: :created, location: @panel_custom }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class Panel::CustomsController < PanelController
   def update
     respond_to do |format|
       if @panel_custom.update(panel_custom_params)
-        format.html { redirect_to edit_panel_custom_path(1), notice: 'Custom was successfully updated.' }
+        format.html { redirect_to edit_panel_custom_path(1), notice: "#{t('panel.alert.update')}" }
         format.json { render :show, status: :ok, location: @panel_custom }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class Panel::CustomsController < PanelController
   def destroy
     @panel_custom.destroy
     respond_to do |format|
-      format.html { redirect_to panel_customs_url, notice: 'Custom was successfully destroyed.' }
+      format.html { redirect_to panel_customs_url, notice: "#{t('panel.alert.destroy')}" }
       format.json { head :no_content }
     end
   end

@@ -1,5 +1,5 @@
 <% @panel_customs.each do |panel_custom| %>
-<h4 class="flow-text"><%= t('title.contact') %></h4>
+<h4 class="flow-text"><%= t('page.title.contact') %></h4>
 
 <div class="row">
 
@@ -10,9 +10,9 @@
     </blockquote>
 
     <ul class="collection">
-      <li class="collection-item"><b><%= t('contact.phone') %>:</b> <%= panel_custom.phone %></li>
-      <li class="collection-item"><b><%= t('contact.email') %>:</b> <%= panel_custom.email %></li>
-      <li class="collection-item"><b><%= t('contact.address') %>:</b> <%= panel_custom.address %></li>
+      <li class="collection-item"><b><%= t('page.contact.phone') %>:</b> <%= panel_custom.phone %></li>
+      <li class="collection-item"><b><%= t('page.contact.email') %>:</b> <%= panel_custom.email %></li>
+      <li class="collection-item"><b><%= t('page.contact.address') %>:</b> <%= panel_custom.address %></li>
     </ul>
   </div>
 
@@ -22,22 +22,22 @@
       <div class="row">
         <div class="input-field col s12">
           <input id="first_name" type="text" class="validate">
-          <label for="first_name"><%= t('form.name') %></label>
+          <label for="first_name"><%= t('page.form.name') %></label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <input id="email" type="email" class="validate">
-          <label for="email"><%= t('form.email') %></label>
+          <label for="email"><%= t('page.form.email') %></label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1"><%= t('form.message') %></label>
+          <label for="textarea1"><%= t('page.form.message') %></label>
         </div>
       </div>
-      <button class="btn right waves-effect waves-light" type="submit" name="action"><%= t('form.send') %>
+      <button class="btn right waves-effect waves-light" type="submit" name="action"><%= t('page.form.send') %>
         <i class="material-icons right">send</i>
       </button>
     </form>

@@ -30,7 +30,7 @@ class Panel::SlidesController < PanelController
 
     respond_to do |format|
       if @panel_slide.save
-        format.html { redirect_to panel_slides_path, notice: 'Slide was successfully created.' }
+        format.html { redirect_to panel_slides_path, notice: "#{t('panel.alert.create')}" }
         format.json { render :show, status: :created, location: @panel_slide }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class Panel::SlidesController < PanelController
   def update
     respond_to do |format|
       if @panel_slide.update(panel_slide_params)
-        format.html { redirect_to panel_slides_path, notice: 'Slide was successfully updated.' }
+        format.html { redirect_to panel_slides_path, notice: "#{t('panel.alert.update')}" }
         format.json { render :show, status: :ok, location: @panel_slide }
       else
         format.html { render :edit }
@@ -58,13 +58,13 @@ class Panel::SlidesController < PanelController
   def destroy
     @panel_slide.destroy
     respond_to do |format|
-      format.html { redirect_to panel_slides_url, notice: 'Slide was successfully destroyed.' }
+      format.html { redirect_to panel_slides_url, notice: "#{t('panel.alert.destroy')}" }
       format.json { head :no_content }
     end
   end
-  
+
   def panel_custom
-    @panel_customs = Panel::Custom.all  
+    @panel_customs = Panel::Custom.all
   end
 
   private

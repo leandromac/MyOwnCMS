@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        
+
         <% unless notice.blank? %>
             <br>
             <div class="alert alert-success alert-dismissable">
@@ -8,9 +8,9 @@
               <%= notice %>
             </div>
         <% end %>
-        
+
         <h1 class="page-header">
-            Dashboard <small>Statistics Overview</small>
+            <%= t('panel.title.home') %>
         </h1>
     </div>
 </div>
@@ -24,8 +24,8 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge"></div>
-                        <h4>WELLCOME!</h4>
-                        <div><%= l current_user.current_sign_in_at %></div>
+                        <h4><%= t('panel.home.wellcome') %></h4>
+                        <div><%= current_user.current_sign_in_at %></div>
                     </div>
                 </div>
             </div>
@@ -47,13 +47,13 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge"><%= @panel_services.count %></div>
-                        <div>TOTAL SERVICES</div>
+                        <div><%= t('panel.home.services.all') %></div>
                     </div>
                 </div>
             </div>
             <%= link_to panel_services_path do %>
                 <div class="panel-footer">
-                    <span class="pull-left">View all services</span>
+                    <span class="pull-left"><%= t('panel.home.services.view') %></span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                     <div class="clearfix"></div>
                 </div>
@@ -69,13 +69,13 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge"><%= @panel_clients.count %></div>
-                        <div>TOTAL CLIENTS</div>
+                        <div><%= t('panel.home.clients.all') %></div>
                     </div>
                 </div>
             </div>
             <%= link_to panel_clients_path do %>
                 <div class="panel-footer">
-                    <span class="pull-left">View all clients</span>
+                    <span class="pull-left"><%= t('panel.home.clients.view') %></span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                     <div class="clearfix"></div>
                 </div>
@@ -91,13 +91,13 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge"><%= @panel_slides.count %></div>
-                        <div>TOTAL SLIDES</div>
+                        <div><%= t('panel.home.slides.all') %></div>
                     </div>
                 </div>
             </div>
             <%= link_to panel_slides_path do %>
                 <div class="panel-footer">
-                    <span class="pull-left">View all slides</span>
+                    <span class="pull-left"><%= t('panel.home.slides.view') %></span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                     <div class="clearfix"></div>
                 </div>
@@ -111,7 +111,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart
+          <i class="fa fa-bar-chart-o fa-fw"></i> <%= t('panel.home.chart') %>
         </h3>
       </div>
       <div class="panel-body">

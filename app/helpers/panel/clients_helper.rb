@@ -1,11 +1,11 @@
 module Panel::ClientsHelper
   def clients_count
     if @panel_clients.count == 0
-      "No client registred"
+      "#{t('panel.clients.count_blank')}"
     elsif @panel_clients.count < 2
-      "#{@panel_clients.count} client registred"
+      "#{@panel_clients.count} #{t('panel.clients.count_plural')}"
     else
-      "#{@panel_clients.count} clients registred"
+      "#{@panel_clients.count} #{t('panel.clients.count_singular')}"
     end
   end
 end

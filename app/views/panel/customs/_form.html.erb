@@ -14,8 +14,8 @@
   <div class="col-lg-12">
 
     <h1 class="page-header">
-      <small><i class="fa fa-gear fa-fw"></i> Settings</small>
-      <%= f.submit "Save changes", class: 'btn btn-success btn-sm pull-right' %>
+      <small><i class="fa fa-gear fa-fw"></i> <%= t('panel.title.settings') %></small>
+      <%= f.submit t('panel.form.submit'), class: 'btn btn-success btn-sm pull-right' %>
     </h1>
 
   </div>
@@ -30,36 +30,36 @@
 
 <div class="row well well-sm">
   <div class="col-lg-6">
-    <h4>Personal info</h4>
+    <h4><%= t('panel.settings.title') %></h4>
     <div class="form-group input-group">
-      <span class="input-group-addon">Project Name:</span>
-      <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
+      <span class="input-group-addon"><%= t('panel.settings.project_name') %></span>
+      <%= f.text_field :name, class: 'form-control', placeholder: '' %>
     </div>
 
     <div class="form-group input-group">
-      <span class="input-group-addon">Logo (PNG):</span>
+      <span class="input-group-addon"><%= t('panel.settings.logo') %></span>
       <%= f.file_field :logo, as: :file, class: 'form-control' %>
     </div>
-    
+
     <div class="form-group input-group">
-      <span class="input-group-addon">Favicon (ICO):</span>
+      <span class="input-group-addon"><%= t('panel.settings.favicon') %></span>
       <%= f.file_field :favicon, as: :file, class: 'form-control' %>
     </div>
 
     <div class="form-group input-group">
-      <span class="input-group-addon">Phone:</span>
-      <%= f.text_field :phone, class: 'form-control', placeholder: 'Phone' %>
+      <span class="input-group-addon"><%= t('panel.settings.phone') %></span>
+      <%= f.text_field :phone, class: 'form-control', placeholder: '' %>
     </div>
-    <p class="help-block">The email below will be used in the contact form</p>
+    <p class="help-block"><%= t('panel.settings.email_help') %></p>
     <div class="form-group input-group">
-      <span class="input-group-addon">Email:</span>
-      <%= f.text_field :email, class: 'form-control', placeholder: 'Email' %>
+      <span class="input-group-addon"><%= t('panel.settings.email') %></span>
+      <%= f.email_field :email, class: 'form-control', placeholder: '' %>
     </div>
 
 
     <div class="form-group input-group">
-      <span class="input-group-addon">Address:</span>
-      <%= f.text_field :address, class: 'form-control', placeholder: 'Address' %>
+      <span class="input-group-addon"><%= t('panel.settings.address') %></span>
+      <%= f.text_field :address, class: 'form-control', placeholder: '' %>
     </div>
 
   </div>
@@ -67,22 +67,17 @@
   <div class="col-lg-6">
 
     <div class="form-group">
-      <label>Footer title</label>
+      <label><%= t('panel.settings.footer_title') %></label>
       <%= f.text_field :footer_title, class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <label>Footer text</label>
+      <label><%= t('panel.settings.footer_text') %></label>
       <%= f.text_area :footer_text, class: 'form-control', rows: '5' %>
-    </div>
-    
-    <div class="form-group">
-      <label>Contact text</label>
-      <%= f.text_area :text_contact, class: 'form-control', rows: '2' %>
     </div>
 
     <div class="form-group">
-      <label>Contact text</label>
+      <label><%= t('panel.settings.text_contact') %></label>
       <%= f.text_area :text_contact, class: 'form-control', rows: '2' %>
     </div>
 
@@ -90,33 +85,33 @@
 </div>
 
 <div class="row well well-sm">
-<h4 class="text-center">Socials media</h4>
+<h4 class="text-center"><%= t('panel.settings.social_media') %></h4>
   <div class="col-lg-6">
 
     <div class="form-group input-group">
       <span class="input-group-addon">Facebook:</span>
-      <%= f.text_field :facebook, class: 'form-control', placeholder: 'http://facebook.com/nickname' %>
+      <%= f.url_field :facebook, class: 'form-control', placeholder: 'http://...' %>
     </div>
 
     <div class="form-group input-group">
       <span class="input-group-addon">Twitter:</span>
-      <%= f.text_field :twitter, class: 'form-control', placeholder: 'http://twitter.com/nickname' %>
+      <%= f.url_field :twitter, class: 'form-control', placeholder: 'http://...' %>
     </div>
 
     <div class="form-group input-group">
       <span class="input-group-addon">Instagram:</span>
-      <%= f.text_field :instagram, class: 'form-control', placeholder: 'http://instagram/nickname' %>
+      <%= f.url_field :instagram, class: 'form-control', placeholder: 'http://...' %>
     </div>
   </div>
   <div class="col-lg-6">
     <div class="form-group input-group">
       <span class="input-group-addon">Youtube:</span>
-      <%= f.text_field :youtube, class: 'form-control', placeholder: 'http://youtube.com/channel/YoUrYoUtUbEcOdE' %>
+      <%= f.url_field :youtube, class: 'form-control', placeholder: 'http://...' %>
     </div>
 
     <div class="form-group input-group">
       <span class="input-group-addon">Linkdin:</span>
-      <%= f.text_field :linkedin, class: 'form-control', placeholder: 'http://linkedin.com/in/nickname' %>
+      <%= f.url_field :linkedin, class: 'form-control', placeholder: 'http://...' %>
     </div>
 
   </div>

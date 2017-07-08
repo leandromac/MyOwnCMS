@@ -1,20 +1,110 @@
 "pt-BR":
-  menu:
-    home: "Início"
-    about: "Sobre mim"
-    services: "Serviços"
-    contact: "Fale Conosco"
-  title:
-    about: "Sobre mim"
-    services: "Serviços"
-    contact: "Fale Conosco"
-    clients: "Clientes"
-  form:
-    name: "Nome completo"
-    email: "Email válido"
-    message: "Mensagem"
-    send: "Enviar"
-  contact:
-    phone: "Telefone"
-    email: "Email"
-    address: "Endereço"
+  page:
+    menu:
+      home: "Início"
+      about: "Quem Somos"
+      services: "Serviços"
+      contact: "Fale Conosco"
+    title:
+      about: "Quem Somos"
+      services: "Serviços"
+      contact: "Fale Conosco"
+      clients: "Clientes"
+    form:
+      name: "Nome completo"
+      email: "Email válido"
+      message: "Mensagem"
+      send: "Enviar"
+    contact:
+      phone: "Telefone"
+      email: "Email"
+      address: "Endereço"
+  panel:
+    menu:
+      home: "Início"
+      settings: "Configurações"
+      about: "Quem Somos"
+      services: "Serviços"
+      clients: "Clientes"
+      slide: "Slideshow"
+      style: "Customização"
+      user:
+        edit: "Editar Perfil"
+        logout: "Sair"
+        password: "Senha"
+        password_confirmation: "Confirmar Senha"
+        current_password: "Senha Atual"
+        without_permition: "Você não tem permissão para alterar essa área."
+    title:
+      home: "Painel de Controle"
+      settings: "Configurações"
+      about: "Quem Somos"
+      services: "Serviços"
+      clients: "Clientes"
+      slide: "Slideshow"
+      style: "Customização"
+    form:
+      view_site: "Visualizar"
+      submit: "Salvar"
+    home:
+      wellcome: "Bem Vindo!"
+      services:
+        all: "TOTAL DE SERVIÇOS"
+        view: "Ver todos os serviços"
+      clients:
+        all: "TOTAL DE CLIENTES"
+        view: "Ver todos os clientes"
+      slides:
+        all: "TOTAL DE SLIDES"
+        view: "Ver todos os slides"
+      chart: "Gráfico"
+    settings:
+      title: "Informações Pessoais"
+      project_name: "Nome do Projeto:"
+      logo: "Logo (.png):"
+      favicon: "Favicon (.ico):"
+      phone: "Telefone:"
+      email: "Email:"
+      email_help: "O email abaixo será utilizado no formulário de contato"
+      address: "Endereço:"
+      footer_title: "Título do Rodapé:"
+      footer_text: "Texto do Rodapé:"
+      text_contact: "Texto do Contato:"
+      social_media: "Redes Sociais"
+    about:
+      title: "Título:"
+      text: "Conte um pouco sobre você ou o seu negócio"
+      image: "Image de Destaque:"
+      about_text: "Sobre:"
+      impact_text: "Texto de Impacto:"
+    services:
+      title: "Título:"
+      image: "Foto:"
+      description: "Descrição do serviço..."
+      create: "Criar um serviço"
+      all: "Todos os Serviços"
+      count_blank: "Não há serviços cadastrado"
+      count_singular: "serviço registrado"
+      count_plural: "serviços registrados"
+    clients:
+      create: "Criar novo cliente"
+      logo: "Logo:"
+      link: "Webite:"
+      all: "Todos os Clientes"
+      count_blank: "Não há clientes cadastrado"
+      count_singular: "cliente registrado"
+      count_plural: "clientes registrados"
+    slideshow:
+      create: "Criar Novo Slide"
+      title: "Título:"
+      image: "Image:"
+      link: "Webite:"
+      description: "Descrição do slide..."
+    style:
+      text: "Personalize o seu Site"
+      custom_css: "CSS Personalizado"
+      type_css: "/* Escreva o seu código CSS aqui */"
+    alert:
+      create: "Criado com sucesso!"
+      update: "Salvo com sucesso!"
+      destroy: "Excluído com sucesso!"

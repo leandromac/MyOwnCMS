@@ -14,8 +14,8 @@
   <div class="col-lg-12">
 
     <h1 class="page-header">
-      <small><i class="fa fa-quote-left"></i> About us</small>
-      <%= f.submit 'Save changes', class: 'btn btn-success btn-sm pull-right' %>
+      <small><i class="fa fa-quote-left"></i> <%= t('panel.title.about') %></small>
+      <%= f.submit t('panel.form.submit'), class: 'btn btn-success btn-sm pull-right' %>
     </h1>
 
   </div>
@@ -29,33 +29,33 @@
 <% end %>
 
 <div class="row well well-sm">
-  <h4 class="text-center">Tell us a little about you or your business</h4>
+  <h4 class="text-center"><%= t('panel.about.text') %></h4>
   <div class="col-lg-6">
     <div class="form-group input-group">
-      <span class="input-group-addon">Title:</span>
-      <%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
+      <span class="input-group-addon"><%= t('panel.about.title') %></span>
+      <%= f.text_field :title, class: 'form-control', placeholder: '' %>
     </div>
   </div>
 
   <div class="col-lg-6">
     <div class="form-group input-group">
-      <span class="input-group-addon">Cover image:</span>
-      <%= f.file_field :image, class: 'form-control', placeholder: 'Image' %>
+      <span class="input-group-addon"><%= t('panel.about.image') %></span>
+      <%= f.file_field :image, class: 'form-control', placeholder: '' %>
     </div>
 
   </div>
 
 <div class="col-lg-12">
     <div class="form-group">
-      <label>About:</label>
-      <%= f.text_area :about, class: 'form-control', placeholder: 'About...', rows: '4' %>
+      <label><%= t('panel.about.about_text') %></label>
+      <%= f.text_area :about, class: 'form-control', placeholder: '', rows: '4' %>
     </div>
   </div>
 
   <div class="col-lg-12">
     <div class="form-group">
-      <label>Impact text:</label>
-      <%= f.text_area :blockquote, class: 'form-control', placeholder: 'Impact text...', rows: '2' %>
+      <label><%= t('panel.about.impact_text') %></label>
+      <%= f.text_area :blockquote, class: 'form-control', placeholder: '', rows: '2' %>
     </div>
   </div>
 

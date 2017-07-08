@@ -29,7 +29,7 @@ class Panel::StylesController < PanelController
 
     respond_to do |format|
       if @panel_style.save
-        format.html { redirect_to edit_panel_style_path(1), notice: 'Style was successfully created.' }
+        format.html { redirect_to edit_panel_style_path(1), notice: "#{t('panel.alert.create')}" }
         format.json { render :show, status: :created, location: @panel_style }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class Panel::StylesController < PanelController
   def update
     respond_to do |format|
       if @panel_style.update(panel_style_params)
-        format.html { redirect_to edit_panel_style_path(1), notice: 'Style was successfully updated.' }
+        format.html { redirect_to edit_panel_style_path(1), notice: "#{t('panel.alert.update')}" }
         format.json { render :show, status: :ok, location: @panel_style }
       else
         format.html { render :edit }
@@ -57,11 +57,11 @@ class Panel::StylesController < PanelController
   def destroy
     @panel_style.destroy
     respond_to do |format|
-      format.html { redirect_to panel_styles_url, notice: 'Style was successfully destroyed.' }
+      format.html { redirect_to panel_styles_url, notice: "#{t('panel.alert.destroy')}" }
       format.json { head :no_content }
     end
   end
-  
+
   def panel_custom
     @panel_customs = Panel::Custom.all
   end

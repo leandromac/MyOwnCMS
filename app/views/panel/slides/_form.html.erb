@@ -12,29 +12,29 @@
   <% end %>
 
   <div class="well well-sm">
-  <h4 class="text-center">Create a new slide</h4>
+  <h4 class="text-center"><%= t('panel.slideshow.create') %></h4>
 
     <div class="form-group input-group">
-      <span class="input-group-addon">Title:</span>
-      <%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
+      <span class="input-group-addon"><%= t('panel.slideshow.title') %></span>
+      <%= f.text_field :title, class: 'form-control', placeholder: '' %>
     </div>
 
     <div class="form-group input-group">
-      <span class="input-group-addon">Image:</span>
+      <span class="input-group-addon"><%= t('panel.slideshow.image') %></span>
       <%= f.file_field :image, class: 'form-control' %>
     </div>
 
     <div class="form-group input-group">
-      <span class="input-group-addon">Link:</span>
-      <%= f.text_field :link, class: 'form-control', placeholder: 'URL' %>
+      <span class="input-group-addon"><%= t('panel.slideshow.link') %></span>
+      <%= f.url_field :link, class: 'form-control', placeholder: 'http://...' %>
     </div>
 
     <div class="form-group">
-      <%= f.text_field :description, class: 'form-control', placeholder: 'Description' %>
+      <%= f.text_field :description, class: 'form-control', placeholder: "#{t('panel.slideshow.description')}" %>
     </div>
 
   <div class="actions">
-    <%= f.submit 'Save slide', class: 'btn btn-success btn-block' %>
+    <%= f.submit t('panel.form.submit'), class: 'btn btn-success btn-block' %>
   </div>
 <% end %>
 </div>

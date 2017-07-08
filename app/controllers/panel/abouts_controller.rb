@@ -2,7 +2,7 @@ class Panel::AboutsController < PanelController
   before_action :authenticate_user!
   before_action :set_panel_about, only: [:show, :edit, :update, :destroy]
   before_action :panel_custom, only: [:edit, :update]
-  
+
   # GET /panel/abouts
   # GET /panel/abouts.json
   def index
@@ -31,7 +31,7 @@ class Panel::AboutsController < PanelController
 
     respond_to do |format|
       if @panel_about.save
-        format.html { redirect_to edit_panel_about_path(1), notice: 'About was successfully created.' }
+        format.html { redirect_to edit_panel_about_path(1), notice: "#{t('panel.alert.create')}" }
         format.json { render :show, status: :created, location: @panel_about }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class Panel::AboutsController < PanelController
   def update
     respond_to do |format|
       if @panel_about.update(panel_about_params)
-        format.html { redirect_to edit_panel_about_path(1), notice: 'About was successfully updated.' }
+        format.html { redirect_to edit_panel_about_path(1), notice: "#{t('panel.alert.update')}" }
         format.json { render :show, status: :ok, location: @panel_about }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class Panel::AboutsController < PanelController
   def destroy
     @panel_about.destroy
     respond_to do |format|
-      format.html { redirect_to panel_abouts_url, notice: 'About was successfully destroyed.' }
+      format.html { redirect_to panel_abouts_url, notice: "#{t('panel.alert.destroy')}" }
       format.json { head :no_content }
     end
   end

@@ -31,7 +31,7 @@ class Panel::ClientsController < PanelController
 
     respond_to do |format|
       if @panel_client.save
-        format.html { redirect_to panel_clients_path, notice: 'Client was successfully created.' }
+        format.html { redirect_to panel_clients_path, notice: "#{t('panel.alert.create')}" }
         format.json { render :show, status: :created, location: @panel_client }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class Panel::ClientsController < PanelController
   def update
     respond_to do |format|
       if @panel_client.update(panel_client_params)
-        format.html { redirect_to panel_clients_path, notice: 'Client was successfully updated.' }
+        format.html { redirect_to panel_clients_path, notice: "#{t('panel.alert.update')}" }
         format.json { render :show, status: :ok, location: @panel_client }
       else
         format.html { render :edit }
@@ -59,11 +59,11 @@ class Panel::ClientsController < PanelController
   def destroy
     @panel_client.destroy
     respond_to do |format|
-      format.html { redirect_to panel_clients_url, notice: 'Client was successfully destroyed.' }
+      format.html { redirect_to panel_clients_url, notice: "#{t('panel.alert.destroy')}" }
       format.json { head :no_content }
     end
   end
-  
+
   def panel_custom
     @panel_customs = Panel::Custom.all
   end

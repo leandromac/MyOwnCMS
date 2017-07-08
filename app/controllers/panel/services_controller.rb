@@ -33,7 +33,7 @@ class Panel::ServicesController < PanelController
 
     respond_to do |format|
       if @panel_service.save
-        format.html { redirect_to panel_services_path, notice: 'Service was successfully created.' }
+        format.html { redirect_to panel_services_path, notice: "#{t('panel.alert.create')}" }
         format.json { render :show, status: :created, location: @panel_service }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class Panel::ServicesController < PanelController
   def update
     respond_to do |format|
       if @panel_service.update(panel_service_params)
-        format.html { redirect_to panel_services_path, notice: 'Service was successfully updated.' }
+        format.html { redirect_to panel_services_path, notice: "#{t('panel.alert.update')}" }
         format.json { render :show, status: :ok, location: @panel_service }
       else
         format.html { render :edit }
@@ -61,11 +61,11 @@ class Panel::ServicesController < PanelController
   def destroy
     @panel_service.destroy
     respond_to do |format|
-      format.html { redirect_to panel_services_url, notice: 'Service was successfully destroyed.' }
+      format.html { redirect_to panel_services_url, notice: "#{t('panel.alert.destroy')}" }
       format.json { head :no_content }
     end
   end
-  
+
   def panel_custom
     @panel_customs = Panel::Custom.all
   end

@@ -38,20 +38,22 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li>
                           <%= link_to edit_user_registration_path do %>
-                            <i class="fa fa-user fa-fw"></i> User Profile
+                            <i class="fa fa-user fa-fw"></i>
+                            <%= t('panel.menu.user.edit')%>
                           <% end %>
                         </li>
                         <li class="divider"></li>
                         <li>
                           <%= link_to destroy_user_session_path, method: :delete do %>
-                            <i class="fa fa-sign-out fa-fw"></i> Logout
+                            <i class="fa fa-sign-out fa-fw"></i>
+                            <%= t('panel.menu.user.logout')%>
                           <% end %>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
                 <li class="view-site">
-                  <a href="/" target="_blank" class="btn btn-info"><i class="fa fa-external-link"></i> View site</a>
+                  <a href="/" target="_blank" class="btn btn-info"><i class="fa fa-external-link"></i> <%= t('panel.form.view_site') %></a>
                 </li>
                 <!-- /.dropdown -->
             </ul>
@@ -61,38 +63,45 @@
                     <ul class="nav" id="side-menu">
                         <li>
                           <%= link_to panel_home_path do %>
-                            <i class="fa fa-dashboard fa-fw"></i> Home
+                            <i class="fa fa-dashboard fa-fw"></i>
+                            <%= t('panel.menu.home') %>
                           <% end %>
                         </li>
                         <li>
                           <%= link_to edit_panel_custom_path(1) do %>
-                            <i class="fa fa-gear"></i> Settings
+                            <i class="fa fa-gear"></i>
+                            <%= t('panel.menu.settings') %>
                           <% end %>
                         </li>
                         <li>
                           <%= link_to edit_panel_about_path(1) do %>
-                            <i class="fa fa-quote-left"></i> About Us
+                            <i class="fa fa-quote-left"></i>
+                            <%= t('panel.menu.about') %>
                           <% end %>
                         </li>
                         <li>
                           <%= link_to panel_services_path do %>
-                            <i class="fa fa-th"></i> Services
+                            <i class="fa fa-th"></i>
+                            <%= t('panel.menu.services') %>
                           <% end %>
                         </li>
                         <li>
                           <%= link_to panel_clients_path do %>
-                            <i class="fa fa-group"></i> Clients
+                            <i class="fa fa-group"></i>
+                            <%= t('panel.menu.clients') %>
                           <% end %>
                         </li>
 
                         <li>
                           <%= link_to panel_slides_path do %>
-                            <i class="fa fa-desktop"></i> Slideshow
+                            <i class="fa fa-desktop"></i>
+                            <%= t('panel.menu.slideshow') %>
                           <% end %>
                         </li>
                         <li>
                           <%= link_to edit_panel_style_path(1) do %>
-                            <i class="fa fa-magic"></i> Style Theme
+                            <i class="fa fa-magic"></i>
+                            <%= t('panel.menu.style') %>
                           <% end %>
                         </li>
                     </ul>
