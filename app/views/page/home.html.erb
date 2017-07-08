@@ -29,7 +29,7 @@
 
   <div class="row">
 
-    <% @panel_services.each do |panel_service| %>
+    <% @panel_services.take(8).each do |panel_service| %>
       <div class="col s12 m3">
         <div class="card">
           <div class="card-image">

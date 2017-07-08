@@ -51,9 +51,9 @@
     <div class="container">
       <div class="nav-wrapper">
         <% if panel_custom.logo.blank? %>
-          <%= link_to panel_custom.name, page_home_path, class: 'brand-logo' %>
+          <%= link_to panel_custom.name, page_home_path('resource', @resource, data: { no_turbolink: true }), class: 'brand-logo' %>
         <% else %>
-          <%= link_to page_home_path do %>
+          <%= link_to page_home_path('resource', @resource, data: { no_turbolink: true }) do %>
             <%= image_tag panel_custom.logo.url(:medium), style: 'height: 60px' %>
           <% end %>
         <% end %>
@@ -61,7 +61,7 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="<% if active_page == 'home' %>active<% end %>">
-            <%= link_to "Home", page_home_path %>
+            <%= link_to "Home", page_home_path('resource', @resource, data: { no_turbolink: true }) %>
           </li>
           <li class="<% if active_page == 'about' %>active<% end %>">
             <%= link_to "About", page_about_path %>
