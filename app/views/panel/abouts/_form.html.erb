@@ -20,7 +20,13 @@
 
   </div>
 </div>
-<p id="notice"><%= notice %></p>
+
+<% unless notice.blank? %>
+  <div class="alert alert-success alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <%= notice %>
+    </div>
+<% end %>
 
 <div class="row well well-sm">
   <h4 class="text-center">Tell us a little about you or your business</h4>
