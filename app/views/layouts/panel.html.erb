@@ -8,8 +8,7 @@
   <%= csrf_meta_tags %>
 
   <% @panel_customs.each do |panel_custom| %>
-    <link rel="shortcut icon" href="<%= panel_custom.favicon %>" type="image/x-icon">
-    <link rel="icon" href="<%= panel_custom.favicon %>" type="image/x-icon">
+  <%= favicon_link_tag "#{panel_custom.favicon}" %>
   <% end %>
 
 </head>
