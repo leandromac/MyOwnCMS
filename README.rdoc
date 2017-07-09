@@ -1,6 +1,6 @@
 == README
 
-PANEL: https://myowncms.herokuapp.com/panel/home
+PANEL: https://myowncms.herokuapp.com/panel/home<br>
 Email: test@myowncms.com
 Password: 123456
 
