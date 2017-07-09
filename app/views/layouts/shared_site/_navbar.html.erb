@@ -1,0 +1,50 @@
+<% @panel_customs.each do |panel_custom| %>
+<!-- START NAVBAR -->
+  <div class="navbar-fixed">
+    <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <% if panel_custom.logo.blank? %>
+          <%= link_to panel_custom.name, page_home_path('resource', @resource, data: { no_turbolink: true }), class: 'brand-logo' %>
+        <% else %>
+          <%= link_to page_home_path('resource', @resource, data: { no_turbolink: true }) do %>
+            <%= image_tag panel_custom.logo.url(:medium), style: 'height: 60px' %>
+          <% end %>
+        <% end %>
+
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="<% if active_page == 'home' %>active<% end %>">
+            <%= link_to t('page.menu.home'), page_home_path('resource', @resource, data: { no_turbolink: true }) %>
+          </li>
+          <li class="<% if active_page == 'about' %>active<% end %>">
+            <%= link_to t('page.menu.about'), page_about_path %>
+          </li>
+          <li class="<% if active_page == 'service' %>active<% end %>">
+            <%= link_to t('page.menu.services'), page_service_path %>
+          </li>
+          <li class="<% if active_page == 'contact' %>active<% end %>">
+            <%= link_to t('page.menu.contact'), page_contact_path %>
+          </li>
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+          <li>
+            <%= link_to "Home", page_home_path %>
+          </li>
+          <li>
+            <%= link_to "About", page_about_path %>
+          </li>
+          <li>
+            <%= link_to "Services", page_service_path %>
+          </li>
+          <li>
+            <%= link_to "Contact", page_contact_path %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+  </div>
+<!-- END NAVBAR -->
+<% end %>

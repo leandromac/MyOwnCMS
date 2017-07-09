@@ -1,0 +1,43 @@
+<!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to "MyOwnCMS", panel_home_path, class: 'navbar-brand' %>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <%= current_user.email %> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                          <%= link_to edit_user_registration_path do %>
+                            <i class="fa fa-user fa-fw"></i>
+                            <%= t('panel.menu.user.edit')%>
+                          <% end %>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <%= link_to destroy_user_session_path, method: :delete do %>
+                            <i class="fa fa-sign-out fa-fw"></i>
+                            <%= t('panel.menu.user.logout')%>
+                          <% end %>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <li class="view-site">
+                  <a href="/" target="_blank" class="btn btn-info"><i class="fa fa-external-link"></i> <%= t('panel.form.view_site') %></a>
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+          <%= render partial: "layouts/shared_panel/sidebar" %>
+            <!-- /.navbar-static-side -->
+        </nav>

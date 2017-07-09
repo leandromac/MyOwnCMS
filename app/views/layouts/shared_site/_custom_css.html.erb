@@ -1,0 +1,19 @@
+<% @panel_styles.each do |panel_style| %>
+  <style>
+    /* Import Google Font */
+    @import url('<%= panel_style.font_link %>');
+    body {
+      font-family: <%= panel_style.font_family.to_s %>
+    }
+    nav {
+      background-color: <%= panel_style.nav_color %> !important;
+    }
+    .page-footer {
+      background-color: <%= panel_style.footer_color %> !important;
+    }
+    blockquote {
+      border-left: 5px solid <%= panel_style.footer_color %> !important;
+    }
+    <%= panel_style.custom_css %>
+  </style>
+<% end %>

@@ -1,0 +1,55 @@
+<% @panel_customs.each do |panel_custom| %>
+<!-- START FOOTER -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"><%= panel_custom.footer_title %></h5>
+          <p class="grey-text text-lighten-4">
+            <%= panel_custom.footer_text %>
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text"><%= t('page.title.contact') %></h5>
+          <ul>
+            <li><%= t('page.contact.phone') %>:
+              <a class="white-text text-lighten-3" disable="disable">
+                <%= panel_custom.phone %>
+              </a>
+            </li>
+            <li><%= t('page.contact.email') %>:
+              <a class="grey-text text-lighten-3" href="mailto:<%= panel_custom.email %>">
+                <%= panel_custom.email %>
+              </a>
+            </li>
+            <li>
+              <%= panel_custom.address %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+
+      © <%= Date.today.year %> Copyright - <%= panel_custom.name %>
+      <% unless panel_custom.linkedin.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.linkedin %>" target="_blank">LinkedIn</a>
+      <% end %>
+      <% unless panel_custom.youtube.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.youtube %>" target="_blank">Youtube</a>
+      <% end %>
+      <% unless panel_custom.instagram.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.instagram %>" target="_blank">Instagram</a>
+      <% end %>
+      <% unless panel_custom.twitter.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.twitter %>" target="_blank">Twitter</a>
+      <% end %>
+      <% unless panel_custom.facebook.blank? %>
+        <a class="social grey-text text-lighten-4 right" href="<%= panel_custom.facebook %>" target="_blank">Facebook</a>
+      <% end %>
+      </div>
+    </div>
+  </footer>
+<!-- END FOOTER -->
+<% end %>
