@@ -9,22 +9,22 @@
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <fieldset>
               <div class="form-group">
-                <%= f.email_field :email, class: 'form-control', placeholder: 'E-mail', autofocus: true %>
-                <p><small>Email: <b>test@myowncms.com</b></small></p>
+                <%= f.email_field :email, class: 'form-control', placeholder: "#{t('devise.sessions.new.email')}", autofocus: true %>
+                <p><small><%= t('devise.sessions.new.email') %>: <b>test@myowncms.com</b></small></p>
               </div>
               <div class="form-group">
-                <%= f.password_field :password, class: 'form-control', placeholder: 'Password', autocomplete: "off" %>
-                <p><small>Password: <b>123456</b></small></p>
+                <%= f.password_field :password, class: 'form-control', placeholder: "#{t('devise.sessions.new.password')}", autocomplete: "off" %>
+                <p><small><%= t('devise.sessions.new.password') %>: <b>123456</b></small></p>
               </div>
               <div class="checkbox">
                 <label>
                   <% if devise_mapping.rememberable? -%>
-                    <%= f.check_box :remember_me %> Remember-me
+                    <%= f.check_box :remember_me %> <%= t('devise.sessions.new.remember_me') %>
                   <% end -%>
                 </label>
               </div>
               <!-- Change this to a button or input when using this as a form -->
-              <%= f.submit "Log in", class: 'btn btn-lg btn-success btn-block' %>
+              <%= f.submit t('devise.sessions.new.login'), class: 'btn btn-lg btn-success btn-block' %>
             </fieldset>
           <% end %>
         </div>
