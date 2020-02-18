@@ -1,10 +1,1 @@
-== README
 
-======================================
-Email: test@myowncms.com
-
-Password: 123456
-======================================
-PANEL: https://myowncms.herokuapp.com/panel/home
-
-SITE: https://myowncms.herokuapp.com/
