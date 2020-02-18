@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'materialize-sass'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.0"
 # Create beautiful JavaScript charts with one line of Ruby http://chartkick.com
 gem "chartkick"
 # A library for generating fake data such as names, addresses, and phone numbers.
